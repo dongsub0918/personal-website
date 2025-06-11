@@ -1,0 +1,58 @@
+.primary {
+  background-color: var(--primary);
+}
+
+.primaryLight {
+  background-color: var(--primary-light);
+}
+
+.primaryDark {
+  background-color: var(--primary-dark);
+}
+
+.secondary {
+  background-color: var(--secondary);
+}
+
+.secondaryLight {
+  background-color: var(--secondary-light);
+}
+
+.secondaryDark {
+  background-color: var(--secondary-dark);
+}
+
+.accent {
+  background-color: var(--accent);
+}
+
+.accentLight {
+  background-color: var(--accent-light);
+}
+
+.accentDark {
+  background-color: var(--accent-dark);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  gap: 10px;
+}
+
+.colorCell {
+  display: flex;
+  width: 50%;
+  height: 50px;
+}
+
+.colorCell > div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
