@@ -1,0 +1,19 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 1000;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  transition: top 0.5s ease-in-out;
+  background-color: var(--background);
+}
+
+.hidden {
+  top: -50px;
+}
