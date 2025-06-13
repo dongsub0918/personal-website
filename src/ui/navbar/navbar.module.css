@@ -17,3 +17,14 @@
 .hidden {
   top: -50px;
 }
+
+.navLinks {
+  position: relative;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.themeSelector {
+  position: absolute;
+  right: 1rem;
+}

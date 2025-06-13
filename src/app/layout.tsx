@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/ui/navbar/navbar";
+import Navbar from "@ui/navbar/navbar";
+import { ThemeProvider } from "@lib/context/themeContext";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -19,10 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light">
+    <html lang="en" className="dark">
       <body className={plusJakarta.variable}>
-        <Navbar />
-        <main style={{ marginTop: "50px" }}>{children}</main>
+        <ThemeProvider>
+          <Navbar />
+          <main style={{ marginTop: "50px" }}>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

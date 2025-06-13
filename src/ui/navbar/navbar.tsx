@@ -1,5 +1,6 @@
 "use client";
 
+import ThemeSelector from "../themeSelector/themeSelector";
 import styles from "./navbar.module.css";
 import { useEffect, useState } from "react";
 
@@ -22,19 +23,22 @@ export default function Navbar() {
       setLastScrollY(currentScrollY);
     };
 
-    // TODO: differ css class for scrolling down and up
-
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   return (
     <nav className={`${styles.container} ${isHidden ? styles.hidden : ""}`}>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/contact">Experiences</a>
-      <a href="/contact">Projects</a>
-      <a href="/contact">Contact me</a>
+      <div className={styles.navLinks}>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Experiences</a>
+        <a href="/contact">Projects</a>
+        <a href="/contact">Contact me</a>
+      </div>
+      <div className={styles.themeSelector}>
+        <ThemeSelector />
+      </div>
     </nav>
   );
 }
