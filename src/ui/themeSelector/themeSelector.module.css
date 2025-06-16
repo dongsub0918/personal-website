@@ -1,10 +1,9 @@
 .button {
-  background-color: var(--primary);
-  color: var(--background);
+  background-color: var(--background);
   border: none;
   text-align: center;
   border-radius: 16px;
-  padding: 5px;
+  padding: 5px 10px;
   transition: background-color var(--transition-duration)
       var(--transition-timing),
     color var(--transition-duration) var(--transition-timing);
