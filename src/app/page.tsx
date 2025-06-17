@@ -1,4 +1,4 @@
-import HomeSection from "@/ui/homeSection/page";
+import HomeSection from "@/ui/homeSection/homeSection";
 import styles from "./page.module.css";
 
 export default function Home() {

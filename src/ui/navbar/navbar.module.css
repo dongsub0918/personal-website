@@ -1,4 +1,5 @@
 .container {
+  background-color: var(--background);
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +11,10 @@
   justify-content: center;
   align-items: center;
   height: 50px;
-  transition: top 0.5s ease-in-out;
+  transition: background-color var(--transition-duration)
+      var(--transition-timing),
+    color var(--transition-duration) var(--transition-timing),
+    top var(--transition-duration) var(--transition-timing);
 }
 
 .hidden {
@@ -25,7 +29,8 @@
 
 .themeSelector {
   position: absolute;
-  right: 1rem;
+  top: 10px;
+  right: 10px;
 }
 .navLinks > a {
   text-decoration: none;

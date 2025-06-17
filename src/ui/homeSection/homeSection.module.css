@@ -1,6 +1,11 @@
-.button {
+.container {
   background-color: var(--background);
-  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 50px);
+  width: 100vw;
   transition: background-color var(--transition-duration)
       var(--transition-timing),
     color var(--transition-duration) var(--transition-timing);

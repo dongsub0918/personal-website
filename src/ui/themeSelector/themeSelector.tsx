@@ -9,7 +9,7 @@ export default function ThemeSelector() {
 
   return (
     <button className={styles.button} onClick={toggleTheme}>
-      <Icon name={theme === "light" ? "light-mode" : "dark-mode"} size={25} />
+      <Icon name="themeSelector" size={30} />
     </button>
   );
 }

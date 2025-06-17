@@ -14,6 +14,7 @@
 
   --background: #ffffff;
   --foreground: #000000;
+  --icon-invert: 0;
 
   --transition-duration: 0.5s;
   --transition-timing: ease-in-out;
@@ -35,6 +36,7 @@
 
   --background: #111827;
   --foreground: #ffffff;
+  --icon-invert: 1;
 }
 
 html,
