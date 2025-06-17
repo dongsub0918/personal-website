@@ -13,6 +13,7 @@
   --accent-dark: #c1666b;
 
   --background: #ffffff;
+  --background-rgb: 255, 255, 255;
   --foreground: #000000;
   --icon-invert: 0;
 
@@ -35,6 +36,7 @@
   --accent-dark: #e07a5f;
 
   --background: #111827;
+  --background-rgb: 17, 24, 39;
   --foreground: #ffffff;
   --icon-invert: 1;
 }

@@ -9,7 +9,7 @@ export default function ThemeSelector() {
 
   return (
     <button className={styles.button} onClick={toggleTheme}>
-      <Icon name="themeSelector" size={30} />
+      <Icon name="theme-selector" size={30} />
     </button>
   );
 }

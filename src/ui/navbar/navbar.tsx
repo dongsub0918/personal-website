@@ -2,6 +2,8 @@
 
 import ThemeSelector from "../themeSelector/themeSelector";
 import styles from "./navbar.module.css";
+import Icon from "@ui/icon/icon";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
@@ -29,16 +31,30 @@ export default function Navbar() {
 
   return (
     <nav className={`${styles.container} ${isHidden ? styles.hidden : ""}`}>
+      <div className={styles.socialLinks}>
+        <Link
+          href="https://www.linkedin.com/in/aiden-dongsub-kim/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name="linkedin-mark" size={25} />
+        </Link>
+        <Link
+          href="https://github.com/dongsub0918"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icon name="github-mark" size={25} />
+        </Link>
+      </div>
       <div className={styles.navLinks}>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Experiences</a>
-        <a href="/contact">Projects</a>
-        <a href="/contact">Contact me</a>
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+        <Link href="/experiences">Experiences</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/contact">Contact me</Link>
       </div>
-      <div className={styles.themeSelector}>
-        <ThemeSelector />
-      </div>
+      <ThemeSelector />
     </nav>
   );
 }
