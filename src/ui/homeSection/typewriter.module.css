@@ -1,0 +1,25 @@
+.typewriter {
+  display: inline-block;
+  font-size: 1.5rem;
+  overflow: hidden;
+  border-right: 0.15em solid var(--primary);
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary);
+  }
+}
+
+@media (max-width: 750px) {
+  .typewriter {
+    font-size: 1.25rem;
+  }
+}

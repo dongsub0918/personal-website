@@ -1,7 +1,5 @@
 .container {
-  background-color: rgba(var(--background-rgb), 0.9);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: var(--background);
   position: fixed;
   top: 0;
   left: 0;
