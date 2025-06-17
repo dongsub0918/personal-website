@@ -25,14 +25,12 @@
   gap: 1rem;
 }
 
-.socialLinks img {
+.socialLinks a {
   opacity: 1;
-  transition: opacity 0.2s var(--transition-timing),
-    background-color var(--transition-duration) var(--transition-timing),
-    color var(--transition-duration) var(--transition-timing);
+  transition: opacity 0.2s var(--transition-timing);
 }
 
-.socialLinks img:hover {
+.socialLinks a:hover {
   opacity: 0.7;
 }
 
