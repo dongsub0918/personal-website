@@ -1,6 +1,6 @@
 "use client";
 
-import ThemeSelector from "../themeSelector/themeSelector";
+import ThemeSelector from "./themeSelector/themeSelector";
 import styles from "./navbar.module.css";
 import Icon from "@ui/icon/icon";
 import Link from "next/link";
@@ -31,14 +31,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    sectionId: string
-  ) => {
-    e.preventDefault();
-    scrollTo(sectionId);
-  };
-
   return (
     <nav className={`${styles.container} ${isHidden ? styles.hidden : ""}`}>
       <div className={styles.socialLinks}>
@@ -58,22 +50,19 @@ export default function Navbar() {
         </Link>
       </div>
       <div className={styles.navLinks}>
-        <Link href="#home" onClick={(e) => handleNavClick(e, "home")}>
+        <Link href="#home" onClick={() => scrollTo("home")}>
           Home
         </Link>
-        <Link href="#about" onClick={(e) => handleNavClick(e, "about")}>
+        <Link href="#about" onClick={() => scrollTo("about")}>
           About
         </Link>
-        <Link
-          href="#experiences"
-          onClick={(e) => handleNavClick(e, "experiences")}
-        >
+        <Link href="#experiences" onClick={(e) => scrollTo("experiences")}>
           Experiences
         </Link>
-        <Link href="#projects" onClick={(e) => handleNavClick(e, "projects")}>
+        <Link href="#projects" onClick={() => scrollTo("projects")}>
           Projects
         </Link>
-        <Link href="#contact" onClick={(e) => handleNavClick(e, "contact")}>
+        <Link href="#contact" onClick={() => scrollTo("contact")}>
           Contact me
         </Link>
       </div>

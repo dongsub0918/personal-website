@@ -1,19 +1,19 @@
 :root {
-  /* Light theme (default) */
-  --primary: #415a77;
-  --primary-light: #56779c;
-  --primary-dark: #354a61;
+  /* Light theme (default) - made even lighter */
+  --primary: #7a9bc0;
+  --primary-light: #9bb8d4;
+  --primary-dark: #6b8bae;
 
-  --secondary: #7d6e83;
-  --secondary-light: #9b8ba0;
-  --secondary-dark: #5f5264;
+  --secondary: #b8a9bf;
+  --secondary-light: #d4c8d9;
+  --secondary-dark: #9b8ba0;
 
-  --accent: #e07a5f;
-  --accent-light: #f4a261;
-  --accent-dark: #c1666b;
+  --accent: #ffb59d;
+  --accent-light: #ffc9b3;
+  --accent-dark: #f4a261;
 
   --background: #ffffff;
-  --foreground: #000000;
+  --foreground: #0f172a;
   --icon-invert: 0;
 
   --transition-duration: 0.5s;
@@ -21,21 +21,21 @@
 }
 
 :root.dark {
-  /* Dark theme */
-  --primary: #6b8bae;
-  --primary-light: #8ba7c7;
-  --primary-dark: #4a6b8e;
+  /* Dark theme - made even darker */
+  --primary: #2d4a6b;
+  --primary-light: #4a6b8e;
+  --primary-dark: #1a2d4a;
 
-  --secondary: #a08fa6;
-  --secondary-light: #b8a9bf;
-  --secondary-dark: #7d6e83;
+  --secondary: #5f5264;
+  --secondary-light: #7d6e83;
+  --secondary-dark: #4a3d4f;
 
-  --accent: #ff9b7d;
-  --accent-light: #ffb59d;
-  --accent-dark: #e07a5f;
+  --accent: #c1666b;
+  --accent-light: #e07a5f;
+  --accent-dark: #a0524f;
 
-  --background: #111827;
-  --foreground: #ffffff;
+  --background: #000000;
+  --foreground: #cbd5e1;
   --icon-invert: 1;
 }
 
