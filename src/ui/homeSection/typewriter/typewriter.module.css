@@ -2,7 +2,7 @@
   display: inline-block;
   font-size: 1.5rem;
   overflow: hidden;
-  border-right: 0.15em solid var(--primary);
+  border-right: 0.15em solid var(--accent-light);
   white-space: nowrap;
   margin: 0 auto;
   animation: blink-caret 0.75s step-end infinite;
@@ -14,7 +14,7 @@
     border-color: transparent;
   }
   50% {
-    border-color: var(--primary);
+    border-color: var(--accent-light);
   }
 }
 

@@ -9,8 +9,17 @@ export default function Typewriter() {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
+    // Global delay before starting
+    if (!hasStarted) {
+      const timeout = setTimeout(() => {
+        setHasStarted(true);
+      }, 500);
+      return () => clearTimeout(timeout);
+    }
+
     const baseText = "I'm a ";
     const currentPhrase = typewriterPhrases[currentPhraseIndex];
     const fullText = baseText + currentPhrase;
@@ -43,7 +52,7 @@ export default function Typewriter() {
       }, 100);
       return () => clearTimeout(timeout);
     }
-  }, [displayText, currentPhraseIndex, isDeleting, isPaused]);
+  }, [displayText, currentPhraseIndex, isDeleting, isPaused, hasStarted]);
 
   return (
     <span>
