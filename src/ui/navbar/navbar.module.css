@@ -42,6 +42,26 @@
 .navLinks > a {
   text-decoration: none;
   font-size: 1.25rem;
+  position: relative;
+  color: var(--foreground);
+  transition: color 0.2s var(--transition-timing);
+}
+
+.navLinks > a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s var(--transition-timing);
+}
+
+.navLinks > a:hover::after {
+  transform: scaleX(1);
 }
 
 /* Mobile Navbar Styling */

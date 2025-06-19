@@ -1,5 +1,5 @@
 const typewriterPhrases = [
-  "full stack developer.",
+  "full stack engineer.",
   "passionate coder.",
   "team player.",
   "problem solver.",
