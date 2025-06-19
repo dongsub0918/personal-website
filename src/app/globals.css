@@ -18,6 +18,7 @@
 
   --transition-duration: 0.5s;
   --transition-timing: ease-in-out;
+  --navbar-height: 50px;
 }
 
 :root.dark {

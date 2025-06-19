@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: var(--navbar-height);
   transition: background-color var(--transition-duration)
       var(--transition-timing),
     color var(--transition-duration) var(--transition-timing),
@@ -17,7 +17,7 @@
 }
 
 .hidden {
-  top: -50px;
+  top: calc(-1 * var(--navbar-height));
 }
 
 .socialLinks {

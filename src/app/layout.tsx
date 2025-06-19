@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={plusJakarta.variable}>
         <ThemeProvider>
           <Navbar />
-          <main style={{ marginTop: "50px" }}>{children}</main>
+          <main style={{ marginTop: "var(--navbar-height)" }}>{children}</main>
         </ThemeProvider>
       </body>
     </html>
