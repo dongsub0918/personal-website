@@ -50,14 +50,14 @@
 .navLinks > a::after {
   content: "";
   position: absolute;
-  bottom: -4px;
+  bottom: -5px;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: currentColor;
+  background-color: var(--primary-light);
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform 0.3s var(--transition-timing);
+  transition: transform 0.4s var(--transition-timing);
 }
 
 .navLinks > a:hover::after {

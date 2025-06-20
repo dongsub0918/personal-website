@@ -1,11 +1,20 @@
 import styles from "./aboutSection.module.css";
-import FloatingElement from "@ui/floatingElements";
+import EmergingElement from "@ui/emergingElements/emergingElements";
+
 export default function AboutSection() {
   return (
     <section className={styles.container} id="about">
-      <FloatingElement delay={0.2}>
+      <EmergingElement>
         <h1 className={styles.title}>About Me</h1>
-      </FloatingElement>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit.
+        </p>
+      </EmergingElement>
     </section>
   );
 }

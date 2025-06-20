@@ -1,7 +1,7 @@
 import styles from "./homeSection.module.css";
 import Typewriter from "./typewriter/typewriter";
 import SectionLinks from "./sectionLinks/sectionLinks";
-import FloatingElement from "@ui/floatingElements";
+import FloatingElement from "@/ui/floatingElements/floatingElements";
 
 export default function HomeSection() {
   return (
