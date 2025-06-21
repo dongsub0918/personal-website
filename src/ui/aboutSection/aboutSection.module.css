@@ -17,6 +17,7 @@
   display: flex;
   justify-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .headerContainer::after {
@@ -63,9 +64,18 @@
   font-weight: 600;
 }
 
-.bio {
-  font-size: 1.3rem;
-  line-height: 1.5;
-  text-align: center;
-  padding-top: 1rem;
+.bioCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 3rem;
+  gap: 2rem;
+}
+
+@media (max-width: 750px) {
+  .bioCards {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    gap: 1rem;
+  }
 }
