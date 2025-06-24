@@ -69,13 +69,35 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 3rem;
+  margin-bottom: 2rem;
   gap: 2rem;
+  font-size: 1.2rem;
 }
 
-@media (max-width: 750px) {
+.description {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .headerContainer {
+    align-items: center;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .buttonText {
+    font-size: 1rem;
+  }
+
   .bioCards {
     grid-template-columns: repeat(2, 1fr);
     display: grid;
     gap: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
   }
 }

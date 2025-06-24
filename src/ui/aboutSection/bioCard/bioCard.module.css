@@ -11,7 +11,6 @@
 }
 
 .title {
-  font-size: 1.2rem;
   font-weight: 600;
   position: relative;
   padding-bottom: 5px;
@@ -27,7 +26,8 @@
   background-color: var(--foreground);
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform 0.4s var(--transition-timing);
+  transition: transform var(--transition-duration) var(--transition-timing),
+    background-color var(--transition-duration) var(--transition-timing);
 }
 
 .title.selected::after {

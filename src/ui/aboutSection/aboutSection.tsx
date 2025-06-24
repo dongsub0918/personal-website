@@ -5,30 +5,45 @@ import EmergingElement from "@ui/emergingElements/emergingElements";
 import Icon from "@ui/icon/icon";
 import BioCard from "./bioCard/bioCard";
 import { useState } from "react";
+import bioCardsData from "@lib/content/bioCard";
+import BioDescription from "./bioDescription/bioDescription";
 
 export default function AboutSection() {
   const [selectedCard, setSelectedCard] = useState<string>("");
+  const [descMount, setDescMount] = useState<boolean>(false);
 
   const handleDownload = () => {
-    // Create a link element to trigger the download
     const link = document.createElement("a");
-    link.href = "/resume.pdf"; // This will look for resume.pdf in the public directory
-    link.download = "Dongsub_Kim_Resume.pdf"; // This sets the filename for download
+    link.href = "/resume.pdf";
+    link.download = "Dongsub_Kim_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const handleCardClick = (title: string) => {
-    setSelectedCard(selectedCard === title ? "" : title);
-  };
+    if (selectedCard === "") {
+      // Case 1: No card selected -> select the card
+      setSelectedCard(title);
 
-  const bioCardsData = [
-    { icon: "home", title: "Originated From" },
-    { icon: "location", title: "Currently Based In" },
-    { icon: "code", title: "Coding Pursuit" },
-    { icon: "heart", title: "Hobby" },
-  ];
+      // Mount description immediately
+      setDescMount(true);
+    } else if (selectedCard === title) {
+      // Case 2: Card selected -> deselect the same card
+      setSelectedCard("");
+
+      // Unmount description after 500ms delay
+      setTimeout(() => {
+        setDescMount(false);
+      }, 500);
+    } else {
+      // Case 3: Card selected -> select different card
+      setSelectedCard("");
+      setTimeout(() => {
+        setSelectedCard(title);
+      }, 500);
+    }
+  };
 
   return (
     <section className={styles.container} id="about">
@@ -54,6 +69,14 @@ export default function AboutSection() {
             />
           ))}
         </div>
+        {descMount && (
+          <BioDescription
+            description={
+              bioCardsData.find((card) => card.title === selectedCard)
+                ?.description
+            }
+          />
+        )}
       </EmergingElement>
     </section>
   );

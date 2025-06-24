@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.description {
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.description::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  background-color: var(--background);
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.description::before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  height: 100%;
+  width: 50%;
+  background-color: var(--background);
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.description.revealed::after {
+  transform: scaleX(0);
+}
+
+.description.revealed::before {
+  transform: scaleX(0);
+}
