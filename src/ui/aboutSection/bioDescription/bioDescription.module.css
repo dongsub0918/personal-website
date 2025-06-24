@@ -8,12 +8,15 @@
   font-size: 1.2rem;
   font-weight: 600;
   position: relative;
+  text-align: center;
+  white-space: pre-line;
 }
 
 .description::after {
   content: "";
   position: absolute;
   left: 50%;
+  top: 0;
   height: 100%;
   width: 50%;
   background-color: var(--background);
@@ -26,6 +29,7 @@
   content: "";
   position: absolute;
   right: 50%;
+  top: 0;
   height: 100%;
   width: 50%;
   background-color: var(--background);

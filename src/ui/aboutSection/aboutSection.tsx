@@ -25,14 +25,10 @@ export default function AboutSection() {
     if (selectedCard === "") {
       // Case 1: No card selected -> select the card
       setSelectedCard(title);
-
-      // Mount description immediately
       setDescMount(true);
     } else if (selectedCard === title) {
       // Case 2: Card selected -> deselect the same card
       setSelectedCard("");
-
-      // Unmount description after 500ms delay
       setTimeout(() => {
         setDescMount(false);
       }, 500);

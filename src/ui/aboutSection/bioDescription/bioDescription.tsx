@@ -7,23 +7,25 @@ interface BioDescriptionProps {
 
 export default function BioDescription({ description }: BioDescriptionProps) {
   const [revealed, setRevealed] = useState(false);
+  const [displayText, setDisplayText] = useState<string>("");
 
   useEffect(() => {
     if (description) {
+      setDisplayText(description);
       setRevealed(true);
     } else {
       setRevealed(false);
+      setTimeout(() => {
+        setDisplayText("");
+      }, 450);
     }
-    console.log(description, revealed);
   }, [description]);
 
   return (
     <div className={styles.container}>
-      <span
-        className={`${styles.description} ${revealed ? styles.revealed : ""}`}
-      >
-        {description}
-      </span>
+      <p className={`${styles.description} ${revealed ? styles.revealed : ""}`}>
+        {displayText}
+      </p>
     </div>
   );
 }
