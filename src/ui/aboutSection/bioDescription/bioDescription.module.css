@@ -45,3 +45,9 @@
 .description.revealed::before {
   transform: scaleX(0);
 }
+
+@media (max-width: 760px) {
+  .description {
+    font-size: 1rem;
+  }
+}
