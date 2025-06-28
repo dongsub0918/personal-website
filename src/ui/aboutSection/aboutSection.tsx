@@ -7,19 +7,10 @@ import BioCard from "./bioCard/bioCard";
 import { useState } from "react";
 import bioCardsData from "@lib/content/bioCard";
 import BioDescription from "./bioDescription/bioDescription";
-
+import SectionHeader from "@ui/sectionHeader/sectionHeader";
 export default function AboutSection() {
   const [selectedCard, setSelectedCard] = useState<string>("");
   const [descMount, setDescMount] = useState<boolean>(false);
-
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/resume.pdf";
-    link.download = "Dongsub_Kim_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   const handleCardClick = (title: string) => {
     if (selectedCard === "") {
@@ -44,15 +35,7 @@ export default function AboutSection() {
   return (
     <section className={styles.container} id="about">
       <EmergingElement>
-        <div className={styles.headerContainer}>
-          <h1 className={styles.title}>About Me</h1>
-          <button className={styles.button} onClick={handleDownload}>
-            <span className={styles.buttonText}>Resume</span>
-            <span className={styles.buttonIcon}>
-              <Icon name="download" size={35} />
-            </span>
-          </button>
-        </div>
+        <SectionHeader title="About Me" resumeButton={true} />
         <div className={styles.bioCards}>
           {bioCardsData.map((card) => (
             <BioCard
