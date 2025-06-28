@@ -19,13 +19,21 @@ const bioCardsData = [
     icon: "code",
     title: "Coding",
     description: `I'm a full-stack developer.
-    I value understanding technology from the ground up. I don’t use tools blindly—I strive to grasp the underlying mechanisms before adopting them.
+    I value understanding technology from the ground up. I don’t use tools blindly.
+    I strive to grasp the underlying mechanisms before adopting them.
     At the same time, I believe the best products are simple, intuitive, and well-encapsulated.
-    To me, simplicity is the ultimate sophistication.
+    Simplicity is the ultimate sophistication.
 
 `,
   },
-  { icon: "heart", title: "Hobby", description: "Hobby" },
+  {
+    icon: "heart",
+    title: "Hobby",
+    description: `I am a health enthusiast.
+    I workout 4-5 times a week, and try to maintain myself in good shape.
+    I also care about nutrition, and cooking healthy meals is one of my favorite things to do.
+    `,
+  },
 ];
 
 export default bioCardsData;
