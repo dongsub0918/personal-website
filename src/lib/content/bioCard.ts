@@ -18,7 +18,7 @@ const bioCardsData = [
   {
     icon: "code",
     title: "Coding",
-    description: `I'm a full-stack developer.
+    description: `I'm a full stack engineer.
     I value understanding technology from the ground up. I don’t use tools blindly.
     I strive to grasp the underlying mechanisms before adopting them.
     At the same time, I believe the best products are simple, intuitive, and well-encapsulated.
