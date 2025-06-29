@@ -3,6 +3,7 @@
   justify-items: center;
   justify-content: space-between;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .headerContainer::after {

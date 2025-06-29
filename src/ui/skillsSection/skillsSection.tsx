@@ -7,6 +7,7 @@ export default function SkillsSection() {
     <section className={styles.container} id="about">
       <EmergingElement>
         <SectionHeader title="Skills" />
+        <p>adsadasAAAA</p>
       </EmergingElement>
     </section>
   );

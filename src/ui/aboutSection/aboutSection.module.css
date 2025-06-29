@@ -2,7 +2,7 @@
   background-color: var(--background);
   display: flex;
   flex-direction: column;
-  min-height: 400px;
+  min-height: 460px;
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -28,8 +28,8 @@
 }
 
 @media (max-width: 760px) {
-  .headerContainer {
-    align-items: center;
+  .container {
+    min-height: 100vh;
   }
 
   .title {
