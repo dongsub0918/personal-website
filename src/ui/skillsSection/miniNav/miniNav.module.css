@@ -2,7 +2,27 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
 
-  /* delete later */
-  border: 1px solid blue;
+.tab {
+  cursor: pointer;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: calc(100% + 2rem);
+  height: 2px;
+  background-color: var(--foreground);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-duration) var(--transition-timing);
+}
+
+.tab.active::after {
+  transform: scaleX(1);
 }

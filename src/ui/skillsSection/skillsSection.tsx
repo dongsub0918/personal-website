@@ -10,7 +10,7 @@ import SkillScroller from "./skillScroller/skillScroller";
 import { useState } from "react";
 
 export default function SkillsSection() {
-  const [activeTab, setActiveTab] = useState("frontend");
+  const [activeTab, setActiveTab] = useState("Frontend");
 
   return (
     <section className={styles.container} id="about">

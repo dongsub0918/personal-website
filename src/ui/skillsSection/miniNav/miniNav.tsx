@@ -19,7 +19,11 @@ export default function MiniNav({ activeTab, setActiveTab }: MiniNavProps) {
   return (
     <div className={styles.container}>
       {tabs.map((tab) => (
-        <h2 key={tab} onClick={() => handleTabClick(tab)}>
+        <h2
+          key={tab}
+          className={`${styles.tab} ${activeTab === tab ? styles.active : ""}`}
+          onClick={() => handleTabClick(tab)}
+        >
           {tab}
         </h2>
       ))}
