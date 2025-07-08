@@ -34,8 +34,8 @@ export default function AboutSection() {
 
   return (
     <section className={styles.container} id="about">
-      <SectionHeader title="About Me" resumeButton={true} />
-      <EmergingElement>
+      <EmergingElement threshold={0.7}>
+        <SectionHeader title="About Me" resumeButton={true} />
         <div className={styles.bioCards}>
           {bioCardsData.map((card) => (
             <BioCard

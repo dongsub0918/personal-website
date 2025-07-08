@@ -6,7 +6,7 @@ import styles from "./emergingElements.module.css";
 
 interface EmergingElementProps {
   children: React.ReactNode;
-  initialScale?: number;
+  threshold?: number;
 }
 
 enum ElementState {
@@ -18,21 +18,26 @@ enum ElementState {
 
 export default function EmergingElement({
   children,
-  initialScale = 0.9,
+  threshold = 0.5,
 }: EmergingElementProps) {
   const [intersectionRatio, setIntersectionRatio] = useState(0);
   const [elementState, setElementState] = useState<ElementState>(
     ElementState.HIDDEN
   );
 
+  let thresholdList = [0, threshold];
+  for (let i = threshold + 0.05; i <= 1; i += 0.05) {
+    thresholdList.push(i);
+  }
+
   const [ref, inView] = useInView({
-    threshold: [0, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1],
+    threshold: thresholdList,
     onChange: (inView, entry) => {
       setIntersectionRatio(entry.intersectionRatio);
       setElementState(
         entry.intersectionRatio === 0
           ? ElementState.HIDDEN
-          : entry.intersectionRatio < 0.5
+          : entry.intersectionRatio < threshold
           ? ElementState.SHRINKED
           : entry.intersectionRatio < 0.9
           ? ElementState.GROWING
@@ -49,8 +54,7 @@ export default function EmergingElement({
         transform:
           elementState === ElementState.GROWING
             ? `scale(${
-                initialScale +
-                ((intersectionRatio - 0.5) * (1 - initialScale)) / 0.5
+                0.9 + ((intersectionRatio - 0.5) * (1 - 0.9)) / 0.5
               }) translateY(0)`
             : undefined,
       }}

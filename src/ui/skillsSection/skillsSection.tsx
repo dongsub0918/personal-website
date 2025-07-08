@@ -14,8 +14,8 @@ export default function SkillsSection() {
 
   return (
     <section className={styles.container} id="about">
-      <SectionHeader title="Skills" />
-      <EmergingElement>
+      <EmergingElement threshold={0.7}>
+        <SectionHeader title="Skills" />
         <div className={styles.contentContainer}>
           <MiniNav activeTab={activeTab} setActiveTab={setActiveTab} />
           <SkillScroller activeTab={activeTab} />
