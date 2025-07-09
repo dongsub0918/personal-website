@@ -15,12 +15,12 @@
   position: absolute;
   bottom: -4px;
   left: 0;
-  width: calc(100% + 2rem);
+  width: 100%;
   height: 2px;
   background-color: var(--foreground);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform var(--transition-duration) var(--transition-timing);
+  transition: all var(--transition-duration) var(--transition-timing);
 }
 
 .tab.active::after {

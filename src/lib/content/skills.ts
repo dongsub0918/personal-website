@@ -1,0 +1,157 @@
+import { Skill } from "@lib/types/skills";
+
+const skills: Skill[] = [
+  { name: "AWS", level: 3, iconPath: "/skills/aws.svg", category: "Tools" },
+  { name: "C", level: 2, iconPath: "/skills/c.svg", category: "Languages" },
+  { name: "C++", level: 3, iconPath: "/skills/c++.svg", category: "Languages" },
+  { name: "CSS", level: 2, iconPath: "/skills/css.svg", category: "Frontend" },
+  {
+    name: "Python Flask",
+    level: 3,
+    iconPath: "/skills/python.svg",
+    category: "Backend",
+  },
+  {
+    name: "HTML",
+    level: 3,
+    iconPath: "/skills/html.svg",
+    category: "Frontend",
+  },
+  {
+    name: "JavaScript",
+    level: 2,
+    iconPath: "/skills/javascript.svg",
+    category: "Languages",
+  },
+  {
+    name: "JSCAD",
+    level: 1,
+    iconPath: "/skills/jscad.svg",
+    category: "Frontend",
+  },
+  {
+    name: "Jupyter",
+    level: 1,
+    iconPath: "/skills/jupyter.svg",
+    category: "Tools",
+  },
+  {
+    name: "MySQL",
+    level: 2,
+    iconPath: "/skills/mysql.svg",
+    category: "Backend",
+  },
+  {
+    name: "Next.js",
+    level: 3,
+    iconPath: "/skills/nextjs.svg",
+    category: "Frontend",
+  },
+  { name: "NumPy", level: 1, iconPath: "/skills/numpy.svg", category: "Tools" },
+  {
+    name: "Pandas",
+    level: 1,
+    iconPath: "/skills/pandas.svg",
+    category: "Tools",
+  },
+  {
+    name: "Prolog",
+    level: 1,
+    iconPath: "/skills/prolog.svg",
+    category: "Languages",
+  },
+  {
+    name: "PyTorch",
+    level: 1,
+    iconPath: "/skills/pytorch.svg",
+    category: "Tools",
+  },
+  {
+    name: "Python",
+    level: 3,
+    iconPath: "/skills/python.svg",
+    category: "Languages",
+  },
+  {
+    name: "React Native",
+    level: 3,
+    iconPath: "/skills/reactnative.svg",
+    category: "Frontend",
+  },
+  { name: "SEO", level: 1, iconPath: "/skills/seo.svg", category: "Tools" },
+  {
+    name: "Scheme",
+    level: 1,
+    iconPath: "/skills/scheme.svg",
+    category: "Languages",
+  },
+  { name: "SQL", level: 2, iconPath: "/skills/sql.svg", category: "Languages" },
+  {
+    name: "Tailwind CSS",
+    level: 3,
+    iconPath: "/skills/tailwind.svg",
+    category: "Frontend",
+  },
+  {
+    name: "TensorFlow",
+    level: 1,
+    iconPath: "/skills/tensorflow.svg",
+    category: "Tools",
+  },
+  {
+    name: "Three.js",
+    level: 1,
+    iconPath: "/skills/threejs.svg",
+    category: "Frontend",
+  },
+  {
+    name: "TypeScript",
+    level: 3,
+    iconPath: "/skills/typescript.svg",
+    category: "Languages",
+  },
+  {
+    name: "Web Crawling",
+    level: 1,
+    iconPath: "/skills/webcrawling.svg",
+    category: "Tools",
+  },
+  {
+    name: "WebSocket",
+    level: 2,
+    iconPath: "/skills/websocket.svg",
+    category: "Backend",
+  },
+  {
+    name: "NextAuth",
+    level: 2,
+    iconPath: "/skills/nextauth.svg",
+    category: "Tools",
+  },
+  {
+    name: "Google API",
+    level: 2,
+    iconPath: "/skills/googleapi.svg",
+    category: "Tools",
+  },
+  {
+    name: "Firebase",
+    level: 1,
+    iconPath: "/skills/firebase.svg",
+    category: "Tools",
+  },
+  {
+    name: "AWS SDK",
+    level: 3,
+    iconPath: "/skills/awssdk.svg",
+    category: "Backend",
+  },
+  {
+    name: "React",
+    level: 3,
+    iconPath: "/skills/react.svg",
+    category: "Frontend",
+  },
+];
+
+export default skills;
