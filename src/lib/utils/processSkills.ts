@@ -39,16 +39,10 @@ export default function processSkills(): { [key: string]: Skill[] } {
     const targetCount = Math.ceil(currentCount / 3) * 3;
     const placeholdersNeeded = targetCount - currentCount;
 
-    // Add placeholders at deterministic positions (excluding first and last)
-    for (let i = 0; i < placeholdersNeeded; i++) {
-      // Use deterministic placement: alternate between middle positions
-      const availablePositions = currentSkills.length - 1; // Exclude first and last
-      const positionIndex = i % availablePositions;
-      const insertIndex = positionIndex + 1; // +1 to skip first position
-      currentSkills.splice(insertIndex, 0, createEmptySkill(category));
-    }
-
     // 2. Add 3 empty skills at start and end
+    const fillerPlaceholders = Array(placeholdersNeeded)
+      .fill(null)
+      .map(() => createEmptySkill(category));
     const startPlaceholders = Array(3)
       .fill(null)
       .map(() => createEmptySkill(category));
@@ -59,6 +53,7 @@ export default function processSkills(): { [key: string]: Skill[] } {
     const finalCategorySkills = [
       ...startPlaceholders,
       ...currentSkills,
+      ...fillerPlaceholders,
       ...endPlaceholders,
     ];
     processedSkillsByCategory[category] = finalCategorySkills;

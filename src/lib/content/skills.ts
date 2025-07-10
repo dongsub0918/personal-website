@@ -1,7 +1,6 @@
 import { Skill } from "@lib/types/skills";
 
 const skills: Skill[] = [
-  { name: "AWS", level: 3, iconPath: "/skills/aws.svg", category: "Tools" },
   { name: "C", level: 2, iconPath: "/skills/c.svg", category: "Languages" },
   { name: "C++", level: 3, iconPath: "/skills/c++.svg", category: "Languages" },
   { name: "CSS", level: 2, iconPath: "/skills/css.svg", category: "Frontend" },
@@ -78,7 +77,6 @@ const skills: Skill[] = [
     iconPath: "/skills/reactnative.svg",
     category: "Frontend",
   },
-  { name: "SEO", level: 1, iconPath: "/skills/seo.svg", category: "Tools" },
   {
     name: "Scheme",
     level: 1,
@@ -139,12 +137,6 @@ const skills: Skill[] = [
     level: 1,
     iconPath: "/skills/firebase.svg",
     category: "Tools",
-  },
-  {
-    name: "AWS SDK",
-    level: 3,
-    iconPath: "/skills/awssdk.svg",
-    category: "Backend",
   },
   {
     name: "React",
