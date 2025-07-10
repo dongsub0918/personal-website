@@ -1,0 +1,13 @@
+/* Level Gauge Styles */
+.levelGauge {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.gaugeBox {
+  width: 20px;
+  height: 8px;
+  border: 1px solid var(--foreground);
+  border-radius: 2px;
+}

@@ -141,8 +141,38 @@ const skills: Skill[] = [
   {
     name: "React",
     level: 3,
-    iconPath: "/skills/react.svg",
+    iconPath: "skills/react",
     category: "Frontend",
+  },
+  {
+    name: "AWS Elastic Beanstalk",
+    level: 3,
+    iconPath: "/skills/aws_elastic_beanstalk.svg",
+    category: "Backend",
+  },
+  {
+    name: "AWS S3",
+    level: 3,
+    iconPath: "/skills/aws_s3.svg",
+    category: "Backend",
+  },
+  {
+    name: "AWS RDS",
+    level: 3,
+    iconPath: "/skills/aws_rds.svg",
+    category: "Backend",
+  },
+  {
+    name: "AWS Cloudfront",
+    level: 3,
+    iconPath: "/skills/aws_cloudfront.svg",
+    category: "Backend",
+  },
+  {
+    name: "AWS SNS",
+    level: 3,
+    iconPath: "/skills/aws_sns.svg",
+    category: "Backend",
   },
 ];
 

@@ -1,5 +1,7 @@
 import styles from "./skillScroller.module.css";
 import processSkills from "@lib/utils/processSkills";
+import Icon from "@ui/icon/icon";
+import LevelGauge from "./levelGauge";
 
 interface SkillScrollerProps {
   activeTab: string;
@@ -14,15 +16,14 @@ export default function SkillScroller({ activeTab }: SkillScrollerProps) {
     <div className={styles.container}>
       <div className={styles.zigzagGrid}>
         {currentCategorySkills.map((skill, index) => (
-          <div key={index} className={styles.skillBlockBase}>
-            <p className={styles.skillName}>{skill.name}</p>
+          <div key={index} className={styles.skillBlock}>
+            {skill.iconPath && <Icon name={skill.iconPath} size={50} />}
+            <div className={styles.skillDetails}>
+              <p className={styles.skillName}>{skill.name}</p>
+              {skill.level > 0 && <LevelGauge level={skill.level} />}
+            </div>
           </div>
         ))}
-      </div>
-      <div className={styles.colorExplanationContainer}>
-        <p>Color explanation</p>
-        <p>Color explanation</p>
-        <p>Color explanation</p>
       </div>
     </div>
   );
