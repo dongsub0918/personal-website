@@ -4,3 +4,10 @@
   transition: filter var(--transition-duration) var(--transition-timing);
   filter: invert(var(--icon-invert));
 }
+
+.iconNoInvert {
+  display: inline-block;
+  vertical-align: middle;
+  transition: filter var(--transition-duration) var(--transition-timing);
+  filter: none;
+}

@@ -2,12 +2,16 @@
 .levelGauge {
   display: flex;
   gap: 4px;
-  margin-top: 8px;
 }
 
 .gaugeBox {
-  width: 20px;
-  height: 8px;
-  border: 1px solid var(--foreground);
-  border-radius: 2px;
+  width: 50px;
+  height: 10px;
+  border-radius: 3px;
+
+  transition: all var(--transition-duration) var(--transition-timing);
+}
+
+:global(.dark) .gaugeBox {
+  --foreground: #000000;
 }

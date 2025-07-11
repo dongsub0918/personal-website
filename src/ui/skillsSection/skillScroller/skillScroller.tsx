@@ -16,10 +16,14 @@ export default function SkillScroller({ activeTab }: SkillScrollerProps) {
       <div className={styles.zigzagGrid}>
         {currentCategorySkills.map((skill, index) => (
           <div key={index} className={styles.skillBlock}>
-            {skill.iconPath && <Icon name={skill.iconPath} size={45} />}
+            {skill.iconPath && (
+              <Icon name={skill.iconPath} size={45} preventInvert={true} />
+            )}
             <div className={styles.skillDetails}>
               <p className={styles.skillName}>{skill.name}</p>
-              {skill.level > 0 && <LevelGauge level={skill.level} />}
+              {skill.level > 0 && (
+                <LevelGauge level={skill.level} category={skill.category} />
+              )}
             </div>
           </div>
         ))}
