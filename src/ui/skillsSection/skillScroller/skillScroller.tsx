@@ -11,13 +11,12 @@ export default function SkillScroller({ activeTab }: SkillScrollerProps) {
   const processedSkillsByCategory = processSkills();
   const currentCategorySkills = processedSkillsByCategory[activeTab] || [];
 
-  console.log(processedSkillsByCategory);
   return (
     <div className={styles.container}>
       <div className={styles.zigzagGrid}>
         {currentCategorySkills.map((skill, index) => (
           <div key={index} className={styles.skillBlock}>
-            {skill.iconPath && <Icon name={skill.iconPath} size={50} />}
+            {skill.iconPath && <Icon name={skill.iconPath} size={45} />}
             <div className={styles.skillDetails}>
               <p className={styles.skillName}>{skill.name}</p>
               {skill.level > 0 && <LevelGauge level={skill.level} />}

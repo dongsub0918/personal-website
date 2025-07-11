@@ -32,7 +32,13 @@ export default function processSkills(): { [key: string]: Skill[] } {
 
   categories.forEach((category) => {
     const categorySkills = skillsByCategory[category];
-    let currentSkills = [...categorySkills];
+
+    // Sort skills within category by level in descending order
+    const sortedCategorySkills = [...categorySkills].sort(
+      (a, b) => b.level - a.level
+    );
+
+    let currentSkills = [...sortedCategorySkills];
 
     // 1. Make count a multiple of 3 by adding placeholders
     const currentCount = currentSkills.length;
