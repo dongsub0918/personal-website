@@ -40,7 +40,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem 0 2rem;
-  transition: all var(--transition-duration) var(--transition-timing);
+  transition: background-color var(--transition-duration)
+      var(--transition-timing),
+    color var(--transition-duration) var(--transition-timing),
+    border-color var(--transition-duration) var(--transition-timing);
 }
 
 /* Dark mode styles for skillBlock */
@@ -65,7 +68,7 @@
   font-weight: 600;
   font-size: 1rem;
   text-align: center;
-  transition: all var(--transition-duration) var(--transition-timing);
+  transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .colorExplanationContainer {

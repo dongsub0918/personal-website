@@ -20,7 +20,10 @@
   background-color: var(--foreground);
   transform: scaleX(0);
   transform-origin: left;
-  transition: all var(--transition-duration) var(--transition-timing);
+  transition: background-color var(--transition-duration)
+      var(--transition-timing),
+    color var(--transition-duration) var(--transition-timing),
+    transform var(--transition-duration) var(--transition-timing);
 }
 
 .tab.active::after {
