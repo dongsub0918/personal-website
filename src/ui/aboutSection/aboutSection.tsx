@@ -2,7 +2,6 @@
 
 import styles from "./aboutSection.module.css";
 import EmergingElement from "@ui/emergingElements/emergingElements";
-import Icon from "@ui/icon/icon";
 import BioCard from "./bioCard/bioCard";
 import { useState } from "react";
 import bioCardsData from "@lib/content/bioCard";

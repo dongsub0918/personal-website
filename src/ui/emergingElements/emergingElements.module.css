@@ -3,6 +3,11 @@
   transition: transform 0.1s ease-out;
 }
 
+.emergingElement.noTransforms {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 .emergingElement.hidden {
   opacity: 0;
   transform: scale(0.9) translateY(0);

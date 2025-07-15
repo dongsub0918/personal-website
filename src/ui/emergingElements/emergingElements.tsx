@@ -1,12 +1,13 @@
 "use client";
 
 import { useInView } from "react-intersection-observer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./emergingElements.module.css";
 
 interface EmergingElementProps {
   children: React.ReactNode;
   threshold?: number;
+  inactiveMaxPixel?: number;
 }
 
 enum ElementState {
@@ -19,11 +20,29 @@ enum ElementState {
 export default function EmergingElement({
   children,
   threshold = 0.5,
+  inactiveMaxPixel = 750,
 }: EmergingElementProps) {
   const [intersectionRatio, setIntersectionRatio] = useState(0);
   const [elementState, setElementState] = useState<ElementState>(
     ElementState.HIDDEN
   );
+  const [viewportWidth, setViewportWidth] = useState(0);
+
+  // Track viewport width
+  useEffect(() => {
+    const updateViewportWidth = () => {
+      setViewportWidth(window.innerWidth);
+    };
+
+    // Set initial width
+    updateViewportWidth();
+
+    // Add event listener for resize
+    window.addEventListener("resize", updateViewportWidth);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", updateViewportWidth);
+  }, []);
 
   let thresholdList = [0, threshold];
   for (let i = threshold + 0.05; i <= 1; i += 0.05) {
@@ -46,13 +65,18 @@ export default function EmergingElement({
     },
   });
 
+  // Only apply transforms if viewport is larger than inactiveMaxPixel
+  const shouldApplyTransforms = viewportWidth > inactiveMaxPixel;
+
   return (
     <div
       ref={ref}
-      className={`${styles.emergingElement} ${styles[elementState]}`}
+      className={`${styles.emergingElement} ${styles[elementState]} ${
+        !shouldApplyTransforms ? styles.noTransforms : ""
+      }`}
       style={{
         transform:
-          elementState === ElementState.GROWING
+          shouldApplyTransforms && elementState === ElementState.GROWING
             ? `scale(${
                 0.9 + ((intersectionRatio - 0.5) * (1 - 0.9)) / 0.5
               }) translateY(0)`

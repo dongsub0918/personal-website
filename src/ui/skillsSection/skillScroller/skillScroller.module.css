@@ -1,5 +1,7 @@
 .container {
-  --block-height: 80px;
+  --block-height-row: 80px;
+  --block-height-column: 90px;
+  --block-height-column-mobile: 100px;
 
   display: flex;
   flex-direction: column;
@@ -15,8 +17,11 @@
   gap: 40px;
   width: 100%;
   overflow: hidden;
-  margin: calc(var(--block-height) * -1) 0 calc(var(--block-height) * -1 / 2) 0;
-  clip-path: inset(calc(var(--block-height)) 0 calc(var(--block-height) / 2) 0);
+  margin: calc(var(--block-height-row) * -1) 0
+    calc(var(--block-height-row) * -1 / 2) 0;
+  clip-path: inset(
+    calc(var(--block-height-row)) 0 calc(var(--block-height-row) / 2) 0
+  );
 }
 
 /* Offset the middle column by half the cell height */
@@ -30,7 +35,7 @@
   color: var(--foreground);
   border: 2px solid var(--foreground);
   border-radius: 16px;
-  height: var(--block-height);
+  height: var(--block-height-row);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,8 +50,7 @@
   background: var(--foreground);
   color: var(--background);
   border: 2px solid var(--foreground);
-  border-radius: 16px;
-  height: var(--block-height);
+  /* border-radius: 16px; */
 }
 
 .skillDetails {
@@ -60,6 +64,7 @@
 .skillName {
   font-weight: 600;
   font-size: 1rem;
+  text-align: center;
   transition: all var(--transition-duration) var(--transition-timing);
 }
 
@@ -69,4 +74,52 @@
   align-items: center;
   gap: 3rem;
   padding: 2rem;
+}
+
+@media (max-width: 1250px) {
+  .skillName {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  .skillBlock {
+    flex-direction: column;
+    padding: 0;
+    height: var(--block-height-column);
+    justify-content: center;
+  }
+
+  .zigzagGrid {
+    margin: calc(var(--block-height-column) * -1) 0
+      calc(var(--block-height-column) * -1 / 2) 0;
+    clip-path: inset(
+      calc(var(--block-height-column)) 0 calc(var(--block-height-column) / 2) 0
+    );
+  }
+}
+
+@media (max-width: 800px) {
+  .skillBlock {
+    height: var(--block-height-column-mobile);
+  }
+
+  .zigzagGrid {
+    margin: calc(var(--block-height-column-mobile) * -1) 0
+      calc(var(--block-height-column-mobile) * -1 / 2) 0;
+    clip-path: inset(
+      calc(var(--block-height-column-mobile)) 0
+        calc(var(--block-height-column-mobile) / 2) 0
+    );
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding: 0;
+  }
+
+  .zigzagGrid {
+    gap: 20px;
+  }
 }

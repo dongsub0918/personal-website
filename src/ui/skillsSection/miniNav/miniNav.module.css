@@ -26,3 +26,14 @@
 .tab.active::after {
   transform: scaleX(1);
 }
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .tab {
+    font-size: 1rem;
+  }
+}

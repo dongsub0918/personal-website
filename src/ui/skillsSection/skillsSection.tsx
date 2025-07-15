@@ -14,7 +14,7 @@ export default function SkillsSection() {
 
   return (
     <section className={styles.container} id="about">
-      <EmergingElement threshold={0.7}>
+      <EmergingElement threshold={0.7} inactiveMaxPixel={800}>
         <SectionHeader title="Skills" />
         <div className={styles.contentContainer}>
           <MiniNav activeTab={activeTab} setActiveTab={setActiveTab} />

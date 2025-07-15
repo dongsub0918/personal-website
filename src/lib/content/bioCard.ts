@@ -1,5 +1,12 @@
 const bioCardsData = [
   {
+    icon: "education",
+    title: "Education",
+    description: `〽️ Go Blue! 〽️
+    I graduated from the University of Michigan with a Bachelor's degree in Computer Science in 2023.
+    I will start my master's degree at the University of Michigan School of Information in Fall 2025.`,
+  },
+  {
     icon: "home",
     title: "Originated From",
     description: `Seongnam, Korea 🇰🇷
