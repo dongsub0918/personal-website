@@ -56,11 +56,11 @@ export default function Navbar() {
         <Link href="#about" onClick={() => scrollTo("about")}>
           About
         </Link>
+        <Link href="#skills" onClick={() => scrollTo("skills")}>
+          Skills
+        </Link>
         <Link href="#experiences" onClick={(e) => scrollTo("experiences")}>
           Experiences
-        </Link>
-        <Link href="#projects" onClick={() => scrollTo("projects")}>
-          Projects
         </Link>
         <Link href="#contact" onClick={() => scrollTo("contact")}>
           Contact me

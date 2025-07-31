@@ -9,7 +9,7 @@ const bioCardsData = [
   {
     icon: "home",
     title: "Originated From",
-    description: `Seongnam, Korea 🇰🇷
+    description: `🇰🇷 Seongnam, Korea 🇰🇷
     I was born and raised in Korea, educated in Korea, and completed my mandatory military service in Korea.
     My Korean heritage is a core part of who I am—I carry it with pride.
     I love my family and friends in Korea. While I strongly identify as Korean, I also see myself as a global citizen.`,
@@ -17,7 +17,7 @@ const bioCardsData = [
   {
     icon: "location",
     title: "Currently Based In",
-    description: `Ann Arbor, MI, USA 🇺🇸
+    description: `🇺🇸 Ann Arbor, MI, USA 🇺🇸
     I moved to the United States for my bachelor's degree in Computer Science at the University of Michigan.
     After graduating and a year of experience in the industry, I am currently a research assistant at the University of Michigan.
     Ann Arbor has been my home for the past 4 years, and always has been the best place to live, study, and work in peace.`,

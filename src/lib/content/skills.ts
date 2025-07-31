@@ -60,7 +60,7 @@ const skills: Skill[] = [
   },
   {
     name: "MySQL",
-    level: 2,
+    level: 3,
     iconPath: "skills/MySQL",
     category: "Backend",
   },
@@ -177,13 +177,13 @@ const skills: Skill[] = [
   },
   {
     name: "AWS Cloudfront",
-    level: 3,
+    level: 2,
     iconPath: "skills/AWS",
     category: "Backend",
   },
   {
     name: "AWS SNS",
-    level: 3,
+    level: 1,
     iconPath: "skills/AWS",
     category: "Backend",
   },

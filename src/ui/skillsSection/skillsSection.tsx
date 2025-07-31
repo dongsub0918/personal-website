@@ -13,7 +13,7 @@ export default function SkillsSection() {
   const [activeTab, setActiveTab] = useState("Frontend");
 
   return (
-    <section className={styles.container} id="about">
+    <section className={styles.container} id="skills">
       <EmergingElement threshold={0.7} inactiveMaxPixel={800}>
         <SectionHeader title="Skills" />
         <div className={styles.contentContainer}>
