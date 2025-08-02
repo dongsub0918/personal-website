@@ -15,14 +15,14 @@ export default function SectionLinks() {
           <Icon name="right-up-arrow" size={21} />
         </div>
       </button>
-      <button onClick={() => scrollTo("experiences")}>
-        <span>Experiences</span>
+      <button onClick={() => scrollTo("skills")}>
+        <span>Skills</span>
         <div>
           <Icon name="right-up-arrow" size={21} />
         </div>
       </button>
-      <button onClick={() => scrollTo("projects")}>
-        <span>Projects</span>
+      <button onClick={() => scrollTo("experiences")}>
+        <span>Experiences</span>
         <div>
           <Icon name="right-up-arrow" size={21} />
         </div>

@@ -1,13 +1,16 @@
 import styles from "./miniNav.module.css";
 
 interface MiniNavProps {
+  tabs: string[];
   activeTab: string;
   setActiveTab: (tab: string) => void;
 }
 
-export default function MiniNav({ activeTab, setActiveTab }: MiniNavProps) {
-  const tabs = ["Frontend", "Backend", "Tools", "Languages"];
-
+export default function MiniNav({
+  tabs,
+  activeTab,
+  setActiveTab,
+}: MiniNavProps) {
   return (
     <div className={styles.container}>
       {tabs.map((tab) => (
