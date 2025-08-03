@@ -138,16 +138,16 @@ const experiences: Experiences = {
       },
     ],
   },
-  ROWAN: {
-    title: "Data Analyst",
-    company: "ROWAN",
-    location: "Seoul, South Korea",
-    start: "Apr 2021",
-    end: "Aug 2021",
-    description:
-      "Processed neurosurgery diagnosis natural language data from actual Alzheimer's patients using AI models. Also developed a motion capture game designed to cure early stage Alzheimer's using Python and Mediapipe.",
-    projects: [],
-  },
+  //   ROWAN: {
+  //     title: "Data Analyst",
+  //     company: "ROWAN",
+  //     location: "Seoul, South Korea",
+  //     start: "Apr 2021",
+  //     end: "Aug 2021",
+  //     description:
+  //       "Processed neurosurgery diagnosis natural language data from actual Alzheimer's patients using AI models. Also developed a motion capture game designed to cure early stage Alzheimer's using Python and Mediapipe.",
+  //     projects: [],
+  //   },
 };
 
 export default experiences;
