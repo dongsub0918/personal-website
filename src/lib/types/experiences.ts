@@ -2,6 +2,7 @@ interface Project {
   title: string;
   externallink: string | null;
   link: string | null;
+  preview: string | null;
   descriptions: string[];
   skills: string[];
 }
@@ -20,4 +21,4 @@ interface Experiences {
   [key: string]: Experience;
 }
 
-export type { Experiences };
+export type { Experiences, Project };

@@ -1,28 +1,5 @@
 :root {
   /* Light theme (default) - made even lighter */
-  --primary: #7a9bc0;
-  --primary-light: #9bb8d4;
-  --primary-dark: #6b8bae;
-
-  --secondary: #b8a9bf;
-  --secondary-light: #d4c8d9;
-  --secondary-dark: #9b8ba0;
-
-  --accent: #ffb59d;
-  --accent-light: #ffc9b3;
-  --accent-dark: #f4a261;
-
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --icon-invert: 0;
-
-  --transition-duration: 0.5s;
-  --transition-timing: ease-in-out;
-  --navbar-height: 50px;
-}
-
-:root.dark {
-  /* Dark theme - made even darker */
   --primary: #2d4a6b;
   --primary-light: #4a6b8e;
   --primary-dark: #1a2d4a;
@@ -34,6 +11,28 @@
   --accent: #c1666b;
   --accent-light: #e07a5f;
   --accent-dark: #a0524f;
+
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --icon-invert: 0;
+
+  --transition-duration: 0.5s;
+  --transition-timing: ease-in-out;
+  --navbar-height: 50px;
+}
+
+:root.dark {
+  --primary: #7a9bc0;
+  --primary-light: #9bb8d4;
+  --primary-dark: #6b8bae;
+
+  --secondary: #b8a9bf;
+  --secondary-light: #d4c8d9;
+  --secondary-dark: #9b8ba0;
+
+  --accent: #ffb59d;
+  --accent-light: #ffc9b3;
+  --accent-dark: #f4a261;
 
   --background: #000000;
   --foreground: #cbd5e1;

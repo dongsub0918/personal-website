@@ -8,6 +8,8 @@
   cursor: pointer;
   font-size: 1.3rem;
   position: relative;
+  color: var(--foreground);
+  transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .tab::after {
@@ -26,7 +28,12 @@
     transform var(--transition-duration) var(--transition-timing);
 }
 
+.tab.active {
+  color: var(--primary);
+}
+
 .tab.active::after {
+  background-color: var(--primary);
   transform: scaleX(1);
 }
 

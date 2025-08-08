@@ -12,19 +12,19 @@ export default function SectionLinks() {
       <button onClick={() => scrollTo("about")}>
         <span>About me</span>
         <div>
-          <Icon name="right-up-arrow" size={21} />
+          <Icon name="right-up-arrow" size={21} reverseInvert={true} />
         </div>
       </button>
       <button onClick={() => scrollTo("skills")}>
         <span>Skills</span>
         <div>
-          <Icon name="right-up-arrow" size={21} />
+          <Icon name="right-up-arrow" size={21} reverseInvert={true} />
         </div>
       </button>
       <button onClick={() => scrollTo("experiences")}>
         <span>Experiences</span>
         <div>
-          <Icon name="right-up-arrow" size={21} />
+          <Icon name="right-up-arrow" size={21} reverseInvert={true} />
         </div>
       </button>
     </div>

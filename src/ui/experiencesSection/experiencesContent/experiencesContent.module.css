@@ -13,7 +13,7 @@
 
   h3 {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 1000;
     color: var(--accent);
   }
 
@@ -35,8 +35,8 @@
   text-align: center;
   margin: 3rem 0;
   font-size: 1.3rem;
-  border-top: 1px solid var(--foreground);
-  border-bottom: 1px solid var(--foreground);
+  /* border-top: 1px solid var(--foreground);
+  border-bottom: 1px solid var(--foreground); */
   padding: 1rem 0;
   transition: border-color var(--transition-duration) var(--transition-timing);
 }

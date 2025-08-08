@@ -18,15 +18,16 @@
   );
   background-size: 1000% 100%;
   animation: flowGradient 50s linear infinite;
-  color: var(--foreground);
+  color: var(--background);
   font-family: var(--font-plus-jakarta);
   font-size: 1rem;
   font-weight: 600;
-  border: none;
+  border: solid 4px var(--primary);
   border-radius: 12px;
   padding: 0.5rem 0.7rem;
   cursor: pointer;
-  transition: color var(--transition-duration) var(--transition-timing);
+  transition: color var(--transition-duration) var(--transition-timing),
+    border-color var(--transition-duration) var(--transition-timing);
 }
 
 @keyframes flowGradient {
@@ -51,6 +52,10 @@
 
 .container button:hover > div {
   transform: rotate(90deg);
+}
+
+.container button:hover {
+  border: solid 4px var(--foreground);
 }
 
 @media (max-width: 750px) {

@@ -5,9 +5,13 @@
   filter: invert(var(--icon-invert));
 }
 
-.iconNoInvert {
-  display: inline-block;
+.icon.iconNoInvert {
+  /* display: inline-block;
   vertical-align: middle;
-  transition: filter var(--transition-duration) var(--transition-timing);
+  transition: filter var(--transition-duration) var(--transition-timing); */
   filter: none;
+}
+
+.icon.iconReverseInvert {
+  filter: invert(calc(1 - var(--icon-invert)));
 }
