@@ -17,7 +17,9 @@ export default function MiniNav({
         <h2
           key={tab}
           className={`${styles.tab} ${activeTab === tab ? styles.active : ""}`}
-          onClick={() => setActiveTab(tab)}
+          onClick={() => {
+            setActiveTab(tab);
+          }}
         >
           {tab}
         </h2>

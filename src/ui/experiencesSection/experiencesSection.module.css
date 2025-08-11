@@ -9,14 +9,19 @@
     color var(--transition-duration) var(--transition-timing);
 }
 
-.stickyNavContainer {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
 .contentContainer {
   display: flex;
   padding-top: 2rem;
   gap: 2rem;
+  position: relative;
+}
+
+.stickyNavContainer {
+  position: sticky;
+  top: calc(var(--navbar-height) + 1rem);
+  height: fit-content;
+}
+
+.content {
+  flex: 1;
 }

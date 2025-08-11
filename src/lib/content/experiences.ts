@@ -6,30 +6,36 @@ const experiences: Experiences = {
     company: "University of Michigan Transportation Research Institute (UMTRI)",
     location: "Ann Arbor, MI",
     start: "May 2025",
-    end: null,
+    end: "Present",
     description:
       "Currently a full-time research assistant contributing mainly on the development of web and mobile applications, handling 3D models from actual human posture and face measurements and wheelchair models.",
     projects: [
       {
         title:
           "Online 3D parametric wheelchair - human interaction simulation model",
-        externallink: "https://humanshape.org/WheelchairTool/",
-        link: null,
-        preview: "/project-previews/wheelchair.png",
         descriptions: [
           "Implemented modeling methods using different frameworks for 3D human (Three.js) and wheelchair (JSCAD) models, and optimized the interaction between these models, reducing latency per computation by approximately 60%.",
         ],
         skills: ["Javascript", "Three.js", "JSCAD"],
+        cardContent: {
+          internalLink: null,
+          preview: "/project-previews/wheelchair.png",
+          externalLink: "https://humanshape.org/WheelchairTool/",
+          githubLink: null,
+        },
       },
       {
         title: "3D face mask scanning iOS mobile application",
-        externallink: "",
-        link: null,
-        preview: null,
         descriptions: [
           "Currently developing an application used to scan faces through camera and generate 3D mask objects, using Swift.",
         ],
         skills: ["Swift"],
+        cardContent: {
+          internalLink: null,
+          preview: null,
+          externalLink: null,
+          githubLink: null,
+        },
       },
     ],
   },
@@ -44,9 +50,12 @@ const experiences: Experiences = {
     projects: [
       {
         title: "HELLOMED Website",
-        externallink: "https://www.hello-med.com/",
-        link: null,
-        preview: "/project-previews/hellomed.png",
+        cardContent: {
+          internalLink: null,
+          preview: "/project-previews/hellomed.png",
+          externalLink: "https://www.hello-med.com/",
+          githubLink: null,
+        },
         descriptions: [
           "Deployed HIPAA compliant, reliable, and highly scalable databases and REST API servers for handling medical data including images using presigned URLs and tokens, successfully handling 300+ data submissions per month.",
           "Improved organic traffic by +30% by implementing relevant metadata and structured data derived from traffic analysis.",
@@ -78,9 +87,12 @@ const experiences: Experiences = {
     projects: [
       {
         title: "KISA Community Web Application",
-        externallink: "https://www.umichkisa.com/",
-        link: null,
-        preview: "/project-previews/kisa.png",
+        cardContent: {
+          internalLink: null,
+          preview: "/project-previews/kisa.png",
+          externalLink: "https://www.umichkisa.com/",
+          githubLink: null,
+        },
         descriptions: [
           "Designed and implemented servers and databases to power the bulletin board feature, serving as a platform for +400 user posts and externally requested job postings, with traffic of ~1,000 unique users per day.",
           "Deployed resources on AWS and utilized AWS Cloudfront's content delivery network features to efficiently serve users geographically split between the US and Korea, cutting image loading latency by 95% for Korean users.",
@@ -100,9 +112,12 @@ const experiences: Experiences = {
       },
       {
         title: "Real-time Food Ordering Platform (Pocha)",
-        externallink: "https://www.umichkisa.com/pocha",
-        link: null,
-        preview: "/project-previews/pocha.png",
+        cardContent: {
+          internalLink: null,
+          preview: "/project-previews/pocha.png",
+          externalLink: "https://www.umichkisa.com/pocha",
+          githubLink: null,
+        },
         descriptions: [
           "Designed and implemented a reliable and live notification system for order status updates using socket communication.",
           "Prevented transactions on sold-out items by implementing a fault-tolerant stock update algorithm on the server.",
@@ -134,9 +149,12 @@ const experiences: Experiences = {
     projects: [
       {
         title: "Wafer Chip Defect Detection",
-        externallink: "https://www.dbhitek.com/en",
-        link: null,
-        preview: null,
+        cardContent: {
+          internalLink: null,
+          preview: null,
+          externalLink: null,
+          githubLink: null,
+        },
         descriptions: [
           "Initiated the machine learning model development from scratch by collecting real faulty wafer chip images from production lines by collaborating with DB Hitek's 3 different semiconductor factory teams.",
           "Developed a prototype capable of detecting whether the chip is damaged or not, and classifying 10 most common defect types (11 total classes), achieving 95% accuracy on a test dataset, outperforming manual inspection in reliability.",
