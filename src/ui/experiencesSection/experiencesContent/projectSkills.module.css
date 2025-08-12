@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill {
+  --background: #ffffff;
+  --foreground: #000000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--foreground);
+  background-color: var(--background);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--foreground);
+  border-radius: 15px;
+  font-weight: 600;
+}

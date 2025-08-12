@@ -25,3 +25,14 @@
 .content {
   flex: 1;
 }
+
+@media (max-width: 800px) {
+  .contentContainer {
+    flex-direction: column;
+  }
+
+  .stickyNavContainer {
+    position: relative;
+    top: 0;
+  }
+}

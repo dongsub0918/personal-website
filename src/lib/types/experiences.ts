@@ -1,23 +1,19 @@
-interface CardContentWithPreview {
+interface CardContent {
   internalLink: string | null;
-  preview: string; // non-nullable
-  externalLink: string; // non-nullable
-  githubLink: string[] | null;
-}
-
-interface CardContentWithoutPreview {
-  internalLink: string | null;
-  preview: null;
+  preview: string | null;
   externalLink: string | null;
   githubLink: string[] | null;
 }
 
-type CardContent = CardContentWithPreview | CardContentWithoutPreview;
+interface ProjectSkill {
+  name: string;
+  iconPath: string;
+}
 
 interface Project {
   title: string;
   descriptions: string[];
-  skills: string[];
+  skills: ProjectSkill[];
   cardContent: CardContent;
 }
 
@@ -35,10 +31,4 @@ interface Experiences {
   [key: string]: Experience;
 }
 
-export type {
-  Experiences,
-  Project,
-  CardContent,
-  CardContentWithPreview,
-  CardContentWithoutPreview,
-};
+export type { Experiences, Project, CardContent, ProjectSkill };
