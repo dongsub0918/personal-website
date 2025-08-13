@@ -12,7 +12,12 @@ export default function ProjectSkills({ skills }: ProjectSkillsProps) {
       {skills.map((skill) => (
         <div key={skill.name} className={styles.skill}>
           <span>{skill.name}</span>
-          <Icon name={skill.iconPath} size={30} preventInvert={true} />
+          <div className={styles.iconWideView}>
+            <Icon name={skill.iconPath} size={30} preventInvert={true} />
+          </div>
+          <div className={styles.iconSmallView}>
+            <Icon name={skill.iconPath} size={20} preventInvert={true} />
+          </div>
         </div>
       ))}
     </div>

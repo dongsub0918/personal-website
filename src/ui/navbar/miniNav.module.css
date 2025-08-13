@@ -5,6 +5,7 @@
 }
 
 .tab {
+  display: flex;
   cursor: pointer;
   font-size: 1.3rem;
   position: relative;
@@ -41,6 +42,7 @@
   .container {
     flex-direction: row;
     justify-content: space-between;
+    gap: 1rem;
   }
 
   .tab {

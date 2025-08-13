@@ -17,49 +17,54 @@ export default function ExperiencesContent({
   return (
     <div className={styles.container}>
       {/* header */}
-      <div className={styles.header}>
-        <div className={styles.temp}>
-          <h3>{experience.title}</h3>
-          <span>
-            {experience.start} - {experience.end}
-          </span>
+      <div className={styles.headerContainer}>
+        <div className={styles.companyContainer}>
+          <h3 className={styles.headerFont}>{experience.company}</h3>
         </div>
-        <p>{experience.company}</p>
-        <div className={styles.subHeader}>
-          {/* <span>{experience.location}</span> */}
-        </div>
-        <p className={styles.description}>{experience.description}</p>
+        <p className={styles.subheaderFont}>
+          {experience.title} | {experience.start} - {experience.end} |{" "}
+          {experience.location}
+        </p>
+        <p className={styles.subheaderFont}>{experience.description}</p>
       </div>
 
-      {/* description */}
-
       {/* projects */}
+
       <div className={styles.projectsContainer}>
         {projects.map((project) => (
-          <div key={project.title} className={styles.projectContainer}>
-            <div className={styles.projectContent}>
-              {/* project title */}
-              <p className={styles.projectTitle}>{project.title}</p>
+          <div key={project.title}>
+            <div className={styles.projectContainer}>
+              <div className={styles.projectContent}>
+                {/* project title */}
+                <p className={`${styles.subheaderFont} ${styles.highlight}`}>
+                  {project.title}
+                </p>
 
-              {/* project descriptions */}
-              <div className={styles.description}>
+                {/* project descriptions */}
                 {project.descriptions.map((description) => (
-                  <p key={description}>{description}</p>
+                  <p key={description} className={styles.bulletPointFont}>
+                    {description}
+                  </p>
                 ))}
+
+                {/* project skills */}
+                <div className={styles.projectSkillsWideView}>
+                  <ProjectSkills skills={project.skills} />
+                </div>
               </div>
 
-              {/* project skills */}
-              <ProjectSkills skills={project.skills} />
-
-              {/* project links */}
+              {project.cardContent.preview && (
+                <ProjectPreviewCard
+                  externalLink={project.cardContent.externalLink}
+                  githubLink={project.cardContent.githubLink}
+                  preview={project.cardContent.preview}
+                />
+              )}
             </div>
 
-            {project.cardContent.preview && (
-              <ProjectPreviewCard
-                externalLink={project.cardContent.externalLink}
-                preview={project.cardContent.preview}
-              />
-            )}
+            <div className={styles.projectSkillsSmallView}>
+              <ProjectSkills skills={project.skills} />
+            </div>
           </div>
         ))}
       </div>

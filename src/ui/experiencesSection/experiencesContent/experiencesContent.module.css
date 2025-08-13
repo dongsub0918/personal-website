@@ -4,65 +4,16 @@
   gap: 2rem;
 }
 
-.temp {
+.companyContainer {
   display: flex;
   gap: 2rem;
   align-items: end;
-
-  span {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
 }
 
-.header {
+.headerContainer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  transition: color var(--transition-duration) var(--transition-timing);
-
-  h3 {
-    font-size: 3rem;
-    font-weight: 1000;
-    color: var(--primary);
-    transition: color var(--transition-duration) var(--transition-timing);
-  }
-
-  p {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-}
-
-.subHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-size: 1.2rem;
-
-  p::before {
-    content: "•";
-    color: var(--primary);
-    margin-right: 0.5rem;
-    font-weight: bold;
-    transition: color var(--transition-duration) var(--transition-timing);
-  }
-}
-
-.projectsHeader {
-  font-size: 1.5rem;
-  font-weight: 1000;
-  color: var(--primary);
-  transition: color var(--transition-duration) var(--transition-timing);
 }
 
 .projectsContainer {
@@ -83,8 +34,82 @@
   gap: 2rem;
 }
 
-.projectTitle {
-  font-size: 1.5rem;
+/* font sizes */
+.headerFont {
+  font-size: 3rem;
   font-weight: 1000;
   color: var(--primary);
+}
+
+.subheaderFont {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.bulletPointFont {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.subheaderFont.highlight {
+  font-weight: 1000;
+  color: var(--primary);
+}
+
+.bulletPointFont::before {
+  content: "•";
+  color: var(--primary);
+  margin-right: 0.5rem;
+  font-weight: bold;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+@media (max-width: 600px) {
+  .headerFont {
+    font-size: 2rem;
+  }
+
+  .subheaderFont {
+    font-size: 1.2rem;
+  }
+
+  .bulletPointFont {
+    font-size: 1rem;
+  }
+
+  .projectsContainer {
+    gap: 3rem;
+  }
+
+  .projectContent {
+    gap: 1rem;
+  }
+}
+
+/* skills display */
+
+.projectSkillsWideView {
+  display: block;
+}
+
+.projectSkillsSmallView {
+  display: none;
+  margin-top: 3rem;
+}
+
+@media (max-width: 1400px) {
+  .projectSkillsWideView {
+    display: none;
+  }
+
+  .projectSkillsSmallView {
+    display: block;
+  }
+}
+
+/* preview display */
+@media (max-width: 700px) {
+  .projectContainer {
+    flex-direction: column;
+  }
 }

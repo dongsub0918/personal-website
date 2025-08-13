@@ -58,7 +58,10 @@ const experiences: Experiences = {
           internalLink: null,
           preview: "/project-previews/hellomed.png",
           externalLink: "https://www.hello-med.com/",
-          githubLink: null,
+          githubLink: [
+            "https://github.com/dongsub0918/hellomed-client",
+            "https://github.com/dongsub0918/hellomed-server",
+          ],
         },
         descriptions: [
           "Deployed HIPAA compliant, reliable, and highly scalable databases and REST API servers for handling medical data including images using presigned URLs and tokens, successfully handling 300+ data submissions per month.",
@@ -95,7 +98,10 @@ const experiences: Experiences = {
           internalLink: null,
           preview: "/project-previews/kisa.png",
           externalLink: "https://www.umichkisa.com/",
-          githubLink: null,
+          githubLink: [
+            "https://github.com/dongsub0918/kisa-client",
+            "https://github.com/dongsub0918/kisa-server",
+          ],
         },
         descriptions: [
           "Designed and implemented servers and databases to power the bulletin board feature, serving as a platform for +400 user posts and externally requested job postings, with traffic of ~1,000 unique users per day.",
@@ -120,7 +126,10 @@ const experiences: Experiences = {
           internalLink: null,
           preview: "/project-previews/pocha.png",
           externalLink: "https://www.umichkisa.com/pocha",
-          githubLink: null,
+          githubLink: [
+            "https://github.com/dongsub0918/kisa-client",
+            "https://github.com/dongsub0918/kisa-server",
+          ],
         },
         descriptions: [
           "Designed and implemented a reliable and live notification system for order status updates using socket communication.",

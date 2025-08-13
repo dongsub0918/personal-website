@@ -1,7 +1,6 @@
 "use client";
 
 import SectionHeader from "@ui/sectionHeader/sectionHeader";
-import EmergingElement from "@ui/emergingElements/emergingElements";
 import MiniNav from "@ui/navbar/miniNav";
 import experiences from "@lib/content/experiences";
 

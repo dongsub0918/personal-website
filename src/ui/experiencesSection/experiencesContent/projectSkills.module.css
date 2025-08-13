@@ -19,3 +19,33 @@
   border-radius: 15px;
   font-weight: 600;
 }
+
+.iconWideView {
+  display: block;
+}
+
+.iconSmallView {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .skill {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.5rem;
+  }
+
+  .iconWideView {
+    display: none;
+  }
+
+  .iconSmallView {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .skill {
+    font-size: 1rem;
+    padding: 0.2rem 0.7rem;
+  }
+}
