@@ -7,7 +7,7 @@ interface LevelGaugeProps {
 
 export default function LevelGauge({ level, category }: LevelGaugeProps) {
   // Colors for the gauge boxes
-  let colorRef = {
+  const colorRef = {
     Frontend: "var(--primary)",
     Backend: "var(--secondary)",
     Tools: "var(--accent)",

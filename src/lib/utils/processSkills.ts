@@ -38,7 +38,7 @@ export default function processSkills(): { [key: string]: Skill[] } {
       (a, b) => b.level - a.level
     );
 
-    let currentSkills = [...sortedCategorySkills];
+    const currentSkills = [...sortedCategorySkills];
 
     // 1. Make count a multiple of 3 by adding placeholders
     const currentCount = currentSkills.length;

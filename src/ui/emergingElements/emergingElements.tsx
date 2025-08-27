@@ -44,12 +44,12 @@ export default function EmergingElement({
     return () => window.removeEventListener("resize", updateViewportWidth);
   }, []);
 
-  let thresholdList = [0, threshold];
+  const thresholdList = [0, threshold];
   for (let i = threshold + 0.05; i <= 1; i += 0.05) {
     thresholdList.push(i);
   }
 
-  const [ref, inView] = useInView({
+  const [ref, _] = useInView({
     threshold: thresholdList,
     onChange: (inView, entry) => {
       setIntersectionRatio(entry.intersectionRatio);

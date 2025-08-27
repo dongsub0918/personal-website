@@ -59,7 +59,7 @@ export default function Navbar() {
         <Link href="#skills" onClick={() => scrollTo("skills")}>
           Skills
         </Link>
-        <Link href="#experiences" onClick={(e) => scrollTo("experiences")}>
+        <Link href="#experiences" onClick={() => scrollTo("experiences")}>
           Experiences
         </Link>
         <Link href="#contact" onClick={() => scrollTo("contact")}>

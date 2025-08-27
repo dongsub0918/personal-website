@@ -5,7 +5,7 @@ import styles from "./themeSelector.module.css";
 import Icon from "@/ui/icon/icon";
 
 export default function ThemeSelector() {
-  const { theme, toggleTheme } = useTheme();
+  const { toggleTheme } = useTheme();
 
   return (
     <button className={styles.button} onClick={toggleTheme}>
