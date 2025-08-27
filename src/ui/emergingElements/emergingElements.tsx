@@ -49,7 +49,7 @@ export default function EmergingElement({
     thresholdList.push(i);
   }
 
-  const [ref, _inView] = useInView({
+  const [ref] = useInView({
     threshold: thresholdList,
     onChange: (_inView, entry) => {
       setIntersectionRatio(entry.intersectionRatio);
