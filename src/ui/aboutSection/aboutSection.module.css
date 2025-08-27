@@ -4,8 +4,10 @@
   flex-direction: column;
   min-height: 460px;
   padding-top: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 5%;
+  padding-right: 5%;
+  /* padding-left: 2rem;
+  padding-right: 2rem; */
   transition: background-color var(--transition-duration)
       var(--transition-timing),
     color var(--transition-duration) var(--transition-timing);

@@ -32,8 +32,14 @@ const experiences: Experiences = {
         title: "3D face mask scanning iOS mobile application",
         descriptions: [
           "Currently developing an application used to scan faces through camera and generate 3D mask objects, using Swift.",
+          "Successfully implemented full stack integrations into a native iOS application, and using responses data from the server generated 3D models.",
+          "Designed views for rendering 3D models on a 2D screen, using iOS native frameworks mainly intended for visionOS programming.",
         ],
-        skills: [{ name: "Swift", iconPath: "skills/Swift" }],
+        skills: [
+          { name: "Swift", iconPath: "skills/Swift" },
+          { name: "SwiftUI", iconPath: "skills/Swift" },
+          { name: "RealityKit", iconPath: "skills/Apple" },
+        ],
         cardContent: {
           internalLink: null,
           preview: "/project-previews/face-mask.png",
@@ -64,8 +70,9 @@ const experiences: Experiences = {
           ],
         },
         descriptions: [
-          "Deployed HIPAA compliant, reliable, and highly scalable databases and REST API servers for handling medical data including images using presigned URLs and tokens, successfully handling 300+ data submissions per month.",
-          "Improved organic traffic by +30% by implementing relevant metadata and structured data derived from traffic analysis.",
+          "Migrated legacy Wix site to a custom developed application, enhancing UX and enabling full control over the features.",
+          "Built and deployed HIPAA-compliant systems for processing sensitive patient data, using presigned URLs, auth tokens, and strict CORS rules; reliably handling 300+ monthly submissions of sensitive patient medical data including images.",
+          "Optimized search engine performance through search engine optimization (SEO) techniques, including the use of traffic-informed metadata, semantic HTML and structured data resulting in a 30%+ increase in organic traffic.",
         ],
         skills: [
           { name: "Typescript", iconPath: "skills/TypeScript" },

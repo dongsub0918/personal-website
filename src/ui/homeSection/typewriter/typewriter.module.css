@@ -23,3 +23,15 @@
     font-size: 1.25rem;
   }
 }
+
+@media (min-width: 1000px) {
+  .typewriter {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .typewriter {
+    font-size: 2rem;
+  }
+}

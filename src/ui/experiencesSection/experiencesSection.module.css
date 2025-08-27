@@ -2,8 +2,8 @@
   background-color: var(--background);
   display: flex;
   flex-direction: column;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 5%;
+  padding-right: 5%;
   transition: background-color var(--transition-duration)
       var(--transition-timing),
     color var(--transition-duration) var(--transition-timing);

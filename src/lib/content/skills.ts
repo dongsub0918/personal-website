@@ -187,6 +187,12 @@ const skills: Skill[] = [
     iconPath: "skills/AWS",
     category: "Backend",
   },
+  {
+    name: "Swift",
+    level: 1,
+    iconPath: "skills/Swift",
+    category: "Languages",
+  },
 ];
 
 export default skills;
