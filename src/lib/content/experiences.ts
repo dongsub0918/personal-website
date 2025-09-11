@@ -32,7 +32,7 @@ const experiences: Experiences = {
         title: "3D face mask scanning iOS mobile application",
         descriptions: [
           "Currently developing an application used to scan faces through camera and generate 3D mask objects, using Swift.",
-          "Successfully implemented full stack integrations into a native iOS application, and using responses data from the server generated 3D models.",
+          "Successfully implemented full stack integrations into a native iOS application, and using vertex information from responses data from the server generated 3D models.",
           "Designed views for rendering 3D models on a 2D screen, using iOS native frameworks mainly intended for visionOS programming.",
         ],
         skills: [
