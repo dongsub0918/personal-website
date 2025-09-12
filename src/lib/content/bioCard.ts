@@ -19,7 +19,7 @@ const bioCardsData = [
     title: "Currently Based In",
     description: `🇺🇸 Ann Arbor, MI, USA 🇺🇸
     I moved to the United States for my bachelor's degree in Computer Science at the University of Michigan.
-    After graduating and a year of experience in the industry, I am currently a research assistant at the University of Michigan.
+    After graduating and more than an year of full-time work experience in the industry, I now came back to University of Michigan for my master's degree.
     Ann Arbor has been my home for the past 4 years, and always has been the best place to live, study, and work in peace.`,
   },
   {

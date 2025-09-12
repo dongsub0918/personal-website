@@ -1,15 +1,14 @@
 "use client";
 
 import styles from "./aboutSection.module.css";
-import EmergingElement from "@ui/emergingElements/emergingElements";
 import BioCard from "./bioCard/bioCard";
 import { useState } from "react";
 import bioCardsData from "@lib/content/bioCard";
 import BioDescription from "./bioDescription/bioDescription";
 import SectionHeader from "@ui/sectionHeader/sectionHeader";
 export default function AboutSection() {
-  const [selectedCard, setSelectedCard] = useState<string>("");
-  const [descMount, setDescMount] = useState<boolean>(false);
+  const [selectedCard, setSelectedCard] = useState<string>("Education");
+  const [descMount, setDescMount] = useState<boolean>(true);
 
   const handleCardClick = (title: string) => {
     if (selectedCard === "") {
@@ -33,29 +32,27 @@ export default function AboutSection() {
 
   return (
     <section className={styles.container} id="about">
-      <EmergingElement threshold={0.7}>
-        <SectionHeader title="About Me" resumeButton={true} />
-        <div className={styles.bioCards}>
-          {bioCardsData.map((card) => (
-            <BioCard
-              key={card.title}
-              icon={card.icon}
-              iconSize={32}
-              title={card.title}
-              selected={selectedCard === card.title}
-              onClick={() => handleCardClick(card.title)}
-            />
-          ))}
-        </div>
-        {descMount && (
-          <BioDescription
-            description={
-              bioCardsData.find((card) => card.title === selectedCard)
-                ?.description
-            }
+      <SectionHeader title="About Me" resumeButton={true} />
+      <div className={styles.bioCards}>
+        {bioCardsData.map((card) => (
+          <BioCard
+            key={card.title}
+            icon={card.icon}
+            iconSize={32}
+            title={card.title}
+            selected={selectedCard === card.title}
+            onClick={() => handleCardClick(card.title)}
           />
-        )}
-      </EmergingElement>
+        ))}
+      </div>
+      {descMount && (
+        <BioDescription
+          description={
+            bioCardsData.find((card) => card.title === selectedCard)
+              ?.description
+          }
+        />
+      )}
     </section>
   );
 }
