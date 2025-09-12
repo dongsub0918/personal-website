@@ -37,6 +37,7 @@ export default function ContactSection() {
         setSubmitStatus("error");
       }
     } catch (error) {
+      console.error(error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -49,7 +50,7 @@ export default function ContactSection() {
       <h2 className={styles.subTitle}>
         Thanks for checking out my website. <br /> <br />
         If you have any questions or just want to say hi, feel free to contact
-        me. If you leave your email, I'll be able to get back to you.
+        me. If you leave your email, I&apos;ll be able to get back to you.
       </h2>
       <form onSubmit={onSubmit} className={styles.form}>
         <div className={styles.inputGroup}>
