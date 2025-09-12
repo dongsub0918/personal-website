@@ -16,7 +16,7 @@ export default function Footer() {
             As a full stack engineer who started off with mostly backend
             development, I started styling my websites with tailwindcss. So,
             although very light in React, I wanted to style this website only
-            using pure css, and without any external libraries.
+            using pure css, and without any external UI libraries.
             <br /> <br />
             For those who are interested, source code for this website is
             available{" "}
