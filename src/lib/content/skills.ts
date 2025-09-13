@@ -23,7 +23,7 @@ const skills: Skill[] = [
   {
     name: "C++",
     level: 3,
-    iconPath: "skills/C++ (CPlusPlus)",
+    iconPath: "skills/C++",
     category: "Languages",
   },
   { name: "CSS", level: 2, iconPath: "skills/CSS3", category: "Frontend" },
