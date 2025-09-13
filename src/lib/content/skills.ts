@@ -114,7 +114,7 @@ const skills: Skill[] = [
     category: "Frontend",
   },
   {
-    name: "TensorFlow",
+    name: "Tensorflow",
     level: 1,
     iconPath: "skills/TensorFlow",
     category: "Tools",
