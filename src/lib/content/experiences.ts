@@ -1,6 +1,49 @@
 import { Experiences } from "@lib/types/experiences";
 
 const experiences: Experiences = {
+  UMSI: {
+    title: "Graduate Student Instructor (SI 544)",
+    company: "University of Michigan School of Information (UMSI)",
+    location: "Ann Arbor, MI",
+    start: "Aug 2026",
+    end: "Present",
+    description:
+      "Leading 2 weekly lab sections for 50+ students in SI 544, teaching statistics topics, holding office hours and grading assignments.",
+    projects: [],
+  },
+  AURORA: {
+    title: "Software Engineer Intern",
+    company: "Aurora",
+    location: "Pittsburgh, PA",
+    start: "Jun 2026",
+    end: "Aug 2026",
+    description:
+      "Built internal tooling for managing the lifecycle of autonomous driving data, letting teams define time-to-live (TTL) policies for data stored at petabyte scale.",
+    projects: [
+      {
+        title: "Data Lifecycle (TTL) Policy Web Application",
+        descriptions: [
+          "Enabled the purge of 190PB+ of stale data, saving $50M+ per year in storage costs.",
+          "Integrated the web application with backend data services over gRPC.",
+          "Made data lifecycle management self-serve, letting non-engineers create and manage TTL policies without engineering support.",
+        ],
+        skills: [
+          { name: "Typescript", iconPath: "skills/TypeScript" },
+          { name: "React", iconPath: "skills/React" },
+          { name: "Python", iconPath: "skills/Python" },
+          { name: "Go", iconPath: "skills/Go" },
+          { name: "gRPC", iconPath: "skills/gRPC" },
+          { name: "AWS S3", iconPath: "skills/AWS" },
+        ],
+        cardContent: {
+          internalLink: null,
+          preview: null,
+          externalLink: null,
+          githubLink: null,
+        },
+      },
+    ],
+  },
   UMTRI: {
     title: "Research Assistant",
     company: "University of Michigan Transportation Research Institute (UMTRI)",
