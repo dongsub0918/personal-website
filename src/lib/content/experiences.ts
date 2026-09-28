@@ -49,9 +49,9 @@ const experiences: Experiences = {
     company: "University of Michigan Transportation Research Institute (UMTRI)",
     location: "Ann Arbor, MI",
     start: "May 2025",
-    end: "Present",
+    end: "Apr 2026",
     description:
-      "Currently a full-time research assistant contributing mainly on the development of web and mobile applications, handling 3D models from actual human posture and face measurements and wheelchair models.",
+      "Worked as a full-time research assistant contributing mainly on the development of web and mobile applications, handling 3D models from actual human posture and face measurements and wheelchair models.",
     projects: [
       {
         title:
@@ -74,9 +74,11 @@ const experiences: Experiences = {
       {
         title: "3D face mask scanning iOS mobile application",
         descriptions: [
-          "Currently developing an application used to scan faces through camera and generate 3D mask objects, using Swift.",
+          "Developed an application used to scan faces through camera and generate 3D mask objects, using Swift.",
           "Successfully implemented full stack integrations into a native iOS application, and using vertex information from responses data from the server generated 3D models.",
           "Designed views for rendering 3D models on a 2D screen, using iOS native frameworks mainly intended for visionOS programming.",
+          "Built custom gesture recognizers with RealityKit for intuitive rotation, zoom and inspection of the 3D models.",
+          "Implemented a heatmap visualizing the distance between the face scan and the generated mask, using a k-d tree for fast nearest-point lookups.",
         ],
         skills: [
           { name: "Swift", iconPath: "skills/Swift" },
