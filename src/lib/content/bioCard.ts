@@ -4,7 +4,7 @@ const bioCardsData = [
     title: "Education",
     description: `〽️ Go Blue! 〽️
     I graduated from the University of Michigan with a Bachelor's degree in Computer Science in 2023.
-    I will start my master's degree at the University of Michigan School of Information in Fall 2025.`,
+    I am currently pursuing a Master of Science in Information Science at the University of Michigan School of Information, expected to graduate in May 2027.`,
   },
   {
     icon: "home",
@@ -20,7 +20,7 @@ const bioCardsData = [
     description: `🇺🇸 Ann Arbor, MI, USA 🇺🇸
     I moved to the United States for my bachelor's degree in Computer Science at the University of Michigan.
     After graduating and more than an year of full-time work experience in the industry, I now came back to University of Michigan for my master's degree.
-    Ann Arbor has been my home for the past 4 years, and always has been the best place to live, study, and work in peace.`,
+    Ann Arbor has been my home through both degrees, and always has been the best place to live, study, and work in peace.`,
   },
   {
     icon: "code",
