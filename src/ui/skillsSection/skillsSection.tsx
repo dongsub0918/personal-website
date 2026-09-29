@@ -1,7 +1,7 @@
 "use client";
 
 import SectionHeader from "@ui/sectionHeader/sectionHeader";
-import processSkills from "@/lib/utils/processSkills";
+import { SKILL_CATEGORIES } from "@lib/types/skills";
 
 import styles from "./skillsSection.module.css";
 import SkillScroller from "./skillScroller/skillScroller";
@@ -10,7 +10,7 @@ import MiniNav from "@ui/navbar/miniNav";
 import { useState } from "react";
 
 export default function SkillsSection() {
-  const tabs = Object.keys(processSkills());
+  const tabs: string[] = [...SKILL_CATEGORIES];
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (

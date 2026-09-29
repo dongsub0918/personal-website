@@ -1,68 +1,32 @@
-import { Skill } from "@lib/types/skills";
+import { Skill, SkillCategory, SKILL_CATEGORIES } from "@lib/types/skills";
 import skills from "@lib/content/skills";
 
-export default function processSkills(): { [key: string]: Skill[] } {
-  const categories = ["Frontend", "Backend", "Tools", "Languages"];
+// null renders as an empty placeholder block
+type SkillTile = Skill | null;
 
-  // Sort skills by category order defined in categories array
-  const sortedSkills = [...skills].sort((a, b) => {
-    const categoryIndexA = categories.indexOf(a.category);
-    const categoryIndexB = categories.indexOf(b.category);
-    return categoryIndexA - categoryIndexB;
-  });
+export type { SkillTile };
 
-  // Group skills by category
-  const skillsByCategory: { [key: string]: Skill[] } = {};
-  categories.forEach((category) => {
-    skillsByCategory[category] = sortedSkills.filter(
-      (skill) => skill.category === category
-    );
-  });
+export default function processSkills(): Record<SkillCategory, SkillTile[]> {
+  const createEmptySkills = (count: number): SkillTile[] =>
+    Array(count).fill(null);
 
-  // Helper function to create empty skill
-  const createEmptySkill = (category: string): Skill => ({
-    name: "",
-    level: 0,
-    iconPath: "",
-    category: category as "Frontend" | "Backend" | "Tools" | "Languages",
-  });
+  // Group skills by category, keeping their order from the content file
+  const processedSkillsByCategory = {} as Record<SkillCategory, SkillTile[]>;
 
-  // Process each category
-  const processedSkillsByCategory: { [key: string]: Skill[] } = {};
-
-  categories.forEach((category) => {
-    const categorySkills = skillsByCategory[category];
-
-    // Sort skills within category by level in descending order
-    const sortedCategorySkills = [...categorySkills].sort(
-      (a, b) => b.level - a.level
-    );
-
-    const currentSkills = [...sortedCategorySkills];
+  SKILL_CATEGORIES.forEach((category) => {
+    const currentSkills = skills.filter((skill) => skill.category === category);
 
     // 1. Make count a multiple of 3 by adding placeholders
-    const currentCount = currentSkills.length;
-    const targetCount = Math.ceil(currentCount / 3) * 3;
-    const placeholdersNeeded = targetCount - currentCount;
+    const targetCount = Math.ceil(currentSkills.length / 3) * 3;
+    const placeholdersNeeded = targetCount - currentSkills.length;
 
     // 2. Add 3 empty skills at start and end
-    const fillerPlaceholders = Array(placeholdersNeeded)
-      .fill(null)
-      .map(() => createEmptySkill(category));
-    const startPlaceholders = Array(3)
-      .fill(null)
-      .map(() => createEmptySkill(category));
-    const endPlaceholders = Array(3)
-      .fill(null)
-      .map(() => createEmptySkill(category));
-
-    const finalCategorySkills = [
-      ...startPlaceholders,
+    processedSkillsByCategory[category] = [
+      ...createEmptySkills(3),
       ...currentSkills,
-      ...fillerPlaceholders,
-      ...endPlaceholders,
+      ...createEmptySkills(placeholdersNeeded),
+      ...createEmptySkills(3),
     ];
-    processedSkillsByCategory[category] = finalCategorySkills;
   });
 
   return processedSkillsByCategory;
