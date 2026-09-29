@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@ui/navbar/navbar";
 import Footer from "@ui/footer/footer";
 import { ThemeProvider } from "@lib/context/themeContext";
+import { themeInitScript } from "@lib/utils/themeInit";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -22,7 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="light">
+    // The init script swaps the class before hydration, so skip the mismatch warning
+    <html lang="en" className="light" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className={plusJakarta.variable}>
         <ThemeProvider>
           <Navbar />
