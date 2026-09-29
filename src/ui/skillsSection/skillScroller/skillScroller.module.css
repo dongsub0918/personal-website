@@ -80,14 +80,12 @@
   pointer-events: none;
 }
 
-@media (hover: hover) {
-  .skillCard:hover .front > * {
-    opacity: 0;
-  }
+.revealed .front > * {
+  opacity: 0;
+}
 
-  .skillCard:hover .back {
-    opacity: 1;
-  }
+.revealed .back {
+  opacity: 1;
 }
 
 /* Back face: where the skill was used */
@@ -137,23 +135,48 @@
   transition: color var(--transition-duration) var(--transition-timing);
 }
 
-/* Only shown on touch devices, where the tile can't flip */
-.usedInInline {
+/* Tiles look pressable and reveal on click/tap */
+.hint {
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  color: var(--foreground);
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+/* Say "Tap" on touch devices and "Click" elsewhere */
+.hintTouch {
   display: none;
-  font-size: 0.7rem;
-  line-height: 1.2;
-  text-align: center;
-  opacity: 0.75;
 }
 
 @media (hover: none) {
-  .usedInInline {
-    display: block;
+  .hintTouch {
+    display: inline;
   }
 
-  .back {
+  .hintPointer {
     display: none;
   }
+}
+
+.skillInner {
+  border-radius: 16px;
+  box-shadow: 0 4px 0 var(--foreground);
+  cursor: pointer;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Set from JS with a minimum duration; :active is too brief for trackpad taps */
+.skillInner.pressed {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--foreground);
+}
+
+.skillInner:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
 }
 
 @media (max-width: 1250px) {
@@ -201,13 +224,11 @@
     padding: 0 4px;
   }
 
-  /* Make room for the inline usedIn line on narrow touch screens */
-  .skillIcon img {
-    width: 32px;
-    height: 32px;
+  .skillBlock.back {
+    padding: 0 6px;
   }
 
-  .usedInInline {
-    font-size: 0.6rem;
+  .usedInItems {
+    font-size: 0.7rem;
   }
 }
