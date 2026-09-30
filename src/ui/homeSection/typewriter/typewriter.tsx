@@ -8,7 +8,6 @@ export default function Typewriter() {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
@@ -24,35 +23,33 @@ export default function Typewriter() {
     const currentPhrase = typewriterPhrases[currentPhraseIndex];
     const fullText = baseText + currentPhrase;
 
-    if (isPaused) {
-      const timeout = setTimeout(() => {
-        setIsPaused(false);
-        setIsDeleting(true);
-      }, 5000);
-      return () => clearTimeout(timeout);
-    }
+    // Every step is scheduled, so state only changes inside timeouts
+    let step: () => void;
+    let delay: number;
 
     if (isDeleting) {
+      delay = 50;
       if (displayText === baseText) {
-        setIsDeleting(false);
-        setCurrentPhraseIndex((prev) => (prev + 1) % typewriterPhrases.length);
+        // Done deleting: move on to the next phrase
+        step = () => {
+          setIsDeleting(false);
+          setCurrentPhraseIndex((prev) => (prev + 1) % typewriterPhrases.length);
+        };
       } else {
-        const timeout = setTimeout(() => {
-          setDisplayText(displayText.slice(0, -1));
-        }, 50);
-        return () => clearTimeout(timeout);
+        step = () => setDisplayText(displayText.slice(0, -1));
       }
+    } else if (displayText === fullText) {
+      // Pause on the full phrase before deleting
+      delay = 5000;
+      step = () => setIsDeleting(true);
+    } else {
+      delay = 100;
+      step = () => setDisplayText(fullText.slice(0, displayText.length + 1));
     }
 
-    if (displayText === fullText) {
-      setIsPaused(true);
-    } else {
-      const timeout = setTimeout(() => {
-        setDisplayText(fullText.slice(0, displayText.length + 1));
-      }, 100);
-      return () => clearTimeout(timeout);
-    }
-  }, [displayText, currentPhraseIndex, isDeleting, isPaused, hasStarted]);
+    const timeout = setTimeout(step, delay);
+    return () => clearTimeout(timeout);
+  }, [displayText, currentPhraseIndex, isDeleting, hasStarted]);
 
   return (
     <span>

@@ -22,7 +22,7 @@ export default function SkillsSection() {
           activeTab={activeTab}
           setActiveTab={setActiveTab}
         />
-        <SkillScroller activeTab={activeTab} />
+        <SkillScroller key={activeTab} activeTab={activeTab} />
       </div>
     </section>
   );

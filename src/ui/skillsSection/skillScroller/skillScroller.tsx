@@ -17,29 +17,26 @@ export default function SkillScroller({ activeTab }: SkillScrollerProps) {
   const currentCategorySkills =
     processedSkillsByCategory[activeTab as SkillCategory] || [];
 
-  // Tile currently showing its "used in" side (one at a time)
+  // Tile currently showing its "used in" side (one at a time).
+  // The parent keys this component by tab, so it resets on tab switch.
   const [revealedIndex, setRevealedIndex] = useState<number | null>(null);
 
   const toggleReveal = (index: number) =>
     setRevealedIndex(revealedIndex === index ? null : index);
 
-  useEffect(() => {
-    setRevealedIndex(null);
-  }, [activeTab]);
-
-  // Tile currently drawn pressed down
+  // Tile currently drawn pressed down; times come from event timestamps
   const [pressedIndex, setPressedIndex] = useState<number | null>(null);
   const pressStart = useRef(0);
   const releaseTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-  const press = (index: number) => {
+  const press = (index: number, timeStamp: number) => {
     clearTimeout(releaseTimer.current);
-    pressStart.current = Date.now();
+    pressStart.current = timeStamp;
     setPressedIndex(index);
   };
 
-  const release = () => {
-    const remaining = MIN_PRESS_MS - (Date.now() - pressStart.current);
+  const release = (timeStamp: number) => {
+    const remaining = MIN_PRESS_MS - (timeStamp - pressStart.current);
     clearTimeout(releaseTimer.current);
     releaseTimer.current = setTimeout(
       () => setPressedIndex(null),
@@ -72,15 +69,15 @@ export default function SkillScroller({ activeTab }: SkillScrollerProps) {
                 aria-pressed={revealedIndex === index}
                 aria-label={`${skill.name}, used in ${skill.usedIn.join(", ")}`}
                 onClick={() => toggleReveal(index)}
-                onPointerDown={() => press(index)}
-                onPointerUp={release}
-                onPointerLeave={release}
-                onPointerCancel={release}
+                onPointerDown={(e) => press(index, e.timeStamp)}
+                onPointerUp={(e) => release(e.timeStamp)}
+                onPointerLeave={(e) => release(e.timeStamp)}
+                onPointerCancel={(e) => release(e.timeStamp)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {
                     e.preventDefault();
-                    press(index);
-                    release();
+                    press(index, e.timeStamp);
+                    release(e.timeStamp);
                     toggleReveal(index);
                   }
                 }}

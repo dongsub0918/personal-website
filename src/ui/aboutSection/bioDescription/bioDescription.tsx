@@ -6,20 +6,25 @@ interface BioDescriptionProps {
 }
 
 export default function BioDescription({ description }: BioDescriptionProps) {
-  const [revealed, setRevealed] = useState(false);
-  const [displayText, setDisplayText] = useState<string>("");
+  // Text kept on screen while the curtain closes after description is cleared
+  const [lingeringText, setLingeringText] = useState("");
+  const [prevDescription, setPrevDescription] = useState(description);
+
+  if (description !== prevDescription) {
+    setPrevDescription(description);
+    if (!description) setLingeringText(prevDescription ?? "");
+  }
 
   useEffect(() => {
-    if (description) {
-      setDisplayText(description);
-      setRevealed(true);
-    } else {
-      setRevealed(false);
-      setTimeout(() => {
-        setDisplayText("");
-      }, 450);
-    }
+    if (description) return;
+    const timeout = setTimeout(() => {
+      setLingeringText("");
+    }, 450);
+    return () => clearTimeout(timeout);
   }, [description]);
+
+  const revealed = Boolean(description);
+  const displayText = description || lingeringText;
 
   return (
     <div className={styles.container}>
